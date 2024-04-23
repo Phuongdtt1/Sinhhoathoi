@@ -1,8 +1,8 @@
-const SinhHoatHoi = ()=> {
+const GroupOperation = () => {
     return (
-        <>
+        <div>
             SinhHoatHoi admin
-        </>
+        </div>
     )
 }
-export default SinhHoatHoi;
+export default GroupOperation;
