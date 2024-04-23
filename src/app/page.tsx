@@ -7,6 +7,12 @@ export default function Home() {
         <div>
             <ul>
                 <li>
+                    <Link href="/admin">
+                        Đăng nhập
+                    </Link>
+
+                </li>
+                <li>
                     <Link href="/Hinhanh">
                         Hoạt động
                     </Link>
@@ -14,7 +20,7 @@ export default function Home() {
                 </li>
                 <li>
                     <Link href="/Tracnghiem">
-                       Trắc nghiệm
+                        Trắc nghiệm
                     </Link>
                 </li>
             </ul>

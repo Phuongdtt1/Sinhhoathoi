@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 ///import "./globals.css";
-
+import x from '@/styles/app.module.css';
+import y from '@/styles/header.module.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -10,13 +11,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+ children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <body className={inter.className}>
+    <header className={x['red']}> Đồn Biên phòng CKQT Nậm Cắn</header>
+    {children}
+    <footer className={y['red']}>Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
+
+    </body>
     </html>
   );
 }
