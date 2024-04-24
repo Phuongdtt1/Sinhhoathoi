@@ -5,20 +5,15 @@ export default function Home() {
         //<main className={styles.main}>
         <div>
             <ul>
-                <li>
-                    <Link href="/admin">
-                        Đăng nhập
-                    </Link>
 
-                </li>
                 <li>
-                    <Link href="/Hinhanh">
+                    <Link href="/image">
                         Hoạt động
                     </Link>
 
                 </li>
                 <li>
-                    <Link href="/Tracnghiem">
+                    <Link href="/quiz">
                         Trắc nghiệm
                     </Link>
                 </li>

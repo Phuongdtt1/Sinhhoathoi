@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -18,7 +19,19 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <header> Đồn Biên phòng CKQT Nậm Cắn</header>
+        <header>
+            <li>
+                <Link href="/">
+                    <button>Trang chủ</button>
+                </Link>
+            </li>
+            Đồn Biên phòng CKQT Nậm Cắn
+            <li>
+                <Link href="/admin">
+                    <button>Đăng nhập</button>
+                </Link>
+            </li>
+        </header>
         {children}
         <footer>Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
         </body>
