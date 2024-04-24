@@ -5,6 +5,7 @@ const Home = () => {
             An, Việt Nam. Cửa khẩu Quốc tế Nậm Cắn ở điểm cuối quốc lộ 7A, thông thương sang cửa khẩu Namkan 19°28′18″B
             104°05′03″Đ tại vùng đất bản Din Dan muang Nong Het tỉnh Xiengkhuang, CHDCND Lào.
         </h1>
+   
     )
 }
 export default Home;

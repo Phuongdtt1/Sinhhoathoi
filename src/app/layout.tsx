@@ -19,23 +19,23 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <header>
+        <header className="bg-gray-100">
             <Link href="/">
                 <button
-                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    className="bg-rose-500 hover:bg-red-300 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                     Trang chủ
                 </button>
             </Link>
-            <div>Đồn Biên phòng CKQT Nậm Cắn</div>
+            <div className="text-green-600 font-bold">Đồn Biên phòng CKQT Nậm Cắn</div>
             <Link href="/admin">
                 <button
-                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    className="bg-gray-100 hover:bg-green-300 text-black font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                     Đăng nhập
                 </button>
             </Link>
         </header>
         {children}
-        <footer>Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
+        <footer className="bg-gray-100 text-red-500">Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
         </body>
         </html>
     );
