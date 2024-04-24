@@ -20,17 +20,15 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className}>
         <header>
-            <li>
                 <Link href="/">
                     <button>Trang chủ</button>
                 </Link>
-            </li>
             Đồn Biên phòng CKQT Nậm Cắn
-            <li>
+
                 <Link href="/admin">
                     <button>Đăng nhập</button>
                 </Link>
-            </li>
+
         </header>
         {children}
         <footer>Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
