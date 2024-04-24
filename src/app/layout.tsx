@@ -20,15 +20,19 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className}>
         <header>
-                <Link href="/">
-                    <button>Trang chủ</button>
-                </Link>
-            Đồn Biên phòng CKQT Nậm Cắn
-
-                <Link href="/admin">
-                    <button>Đăng nhập</button>
-                </Link>
-
+            <Link href="/">
+                <button
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Trang chủ
+                </button>
+            </Link>
+            <div>Đồn Biên phòng CKQT Nậm Cắn</div>
+            <Link href="/admin">
+                <button
+                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Đăng nhập
+                </button>
+            </Link>
         </header>
         {children}
         <footer>Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
