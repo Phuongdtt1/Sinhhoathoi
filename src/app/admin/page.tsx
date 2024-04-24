@@ -2,10 +2,12 @@ const GroupOperation = () => {
     return (
         <div>
             Đăng nhập
-            <label>Tên đăng nhập</label>
+
+            <label className={"background-blue"}>Tên đăng nhập</label>
             <text></text>
             <label>Mật khẩu</label>
             <text></text>
+
         </div>
     )
 }

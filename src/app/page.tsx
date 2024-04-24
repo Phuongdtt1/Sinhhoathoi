@@ -5,7 +5,12 @@ export default function Home() {
         //<main className={styles.main}>
         <div>
             <ul>
+                <li>
+                    <Link href="/home">
+                        Giới thiệu
+                    </Link>
 
+                </li>
                 <li>
                     <Link href="/image">
                         Hoạt động
