@@ -1,9 +1,8 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import type {Metadata} from 'next';
+import {Inter} from 'next/font/google';
 import './globals.css';
-import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({subsets: ['latin']});
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -18,27 +17,52 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <header className="bg-gray-100">
-                    <Link href="/">
+        <body className={inter.className}>
+        <header>
+            <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                    <a href="/home"
+                       className="flex items-center">
+                        <img src="/images/logo.png" className="mr-3 h-6 sm:h-9"
+                             alt="Flowbite Logo"/>
+
+                        <span
+                            className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Đồn BP CKQT Nậm Cắn </span>
+                    </a>
+
+                    <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                         id="mobile-menu-2">
+                        <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                            <li>
+                                <a href="/home"
+                                   className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                                   aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="/image"
+                                   className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Hình
+                                    ảnh</a>
+                            </li>
+                            <li>
+                                <a href="/quiz"
+                                   className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Trắc
+                                    nghiệm</a>
+                            </li>
+
+                        </ul>
                         <button
-                            className="bg-rose-500 hover:bg-red-300 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                        >
-                            Trang chủ
+                            className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Đăng
+                            nhập
                         </button>
-                    </Link>
-                    <div className="text-green-600 font-bold">Đồn Biên phòng CKQT Nậm Cắn</div>
-                    <Link href="/admin">
-                        <button
-                            className="bg-gray-100 hover:bg-green-300 text-black font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                        >
-                            Đăng nhập
-                        </button>
-                    </Link>
-                </header>
-                {children}
-                <footer className="bg-gray-100 text-red-500">Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
-            </body>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+        {children}
+        <footer className="bg-gray-100 text-red-500">Đ/c: Xã Nậm Cắn, huyện Kỳ Sơn, tỉnh Nghệ An</footer>
+        </body>
         </html>
-    );
+    )
+        ;
 }
