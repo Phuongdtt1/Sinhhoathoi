@@ -1,6 +1,6 @@
 'use client';
-import {useRouter} from 'next/navigation';
-import {Carousel} from 'flowbite-react';
+import { useRouter } from 'next/navigation';
+import { Carousel } from 'flowbite-react';
 import React from 'react';
 
 const Image = () => {
@@ -9,7 +9,7 @@ const Image = () => {
         router.push('/');
     };
     return (
-        <div className="h-80 sm:h-64 xl:h-80 2xl:h-96">
+        <div className="h-screen">
             <Carousel>
                 <img
                     src="/images/Picture1.jpg"
@@ -27,8 +27,6 @@ const Image = () => {
                     src="/images/luquetkyson2.jpg"
                     alt="..."
                 />
-            </Carousel>
-            <div className="grid gap-4 grid-cols-3 grid-rows-3">
                 <img
                     src="/images/tuyentruyen.jpg"
                     alt="..."
@@ -49,9 +47,8 @@ const Image = () => {
                     src="/images/Tongket.jpg"
                     alt="..."
                 />
-            </div>
+            </Carousel>
         </div>
-
     )
         ;
 };
