@@ -3,7 +3,7 @@ import React from 'react';
 
 export function ImageCarousel() {
     return (
-        <div className="container h-full">
+        <div className="h-full">
             <Carousel>
                 <img
                     src="/images/cot-moc-403.jpg"

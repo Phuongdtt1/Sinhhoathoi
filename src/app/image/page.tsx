@@ -9,7 +9,7 @@ const Image = () => {
         router.push('/');
     };
     return (
-        <div className="h-96">
+        <div className="container h-96">
             <ImageCarousel />
         </div>
     )

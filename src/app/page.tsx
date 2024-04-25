@@ -5,12 +5,12 @@ export default function Home() {
         <div>
             <ul>
                 <li>
-                    <Link href="/home">
+                    <Link href="/introduction">
                         Giới thiệu
                     </Link>
                 </li>
                 <li>
-                    <Link href="/image">
+                    <Link href="/activity">
                         Hoạt động
                     </Link>
                 </li>
