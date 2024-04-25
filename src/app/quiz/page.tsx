@@ -1,6 +1,6 @@
 const Quiz = () => {
     return (
-        <div>
+        <div className="container">
             Tìm hiểu sinh hoạt hội
         </div>
     );
