@@ -12,35 +12,35 @@ const Image = () => {
         <div className="h-screen">
             <Carousel>
                 <img
-                    src="/images/Picture1.jpg"
+                    src="/images/cot-moc-403.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/Picture2.jpg"
+                    src="/images/cot-moc.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/luquetkyson.jpg"
+                    src="/images/lu-que-ky-son.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/luquetkyson2.jpg"
+                    src="/images/lu-que-ky-son-2.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/tuyentruyen.jpg"
+                    src="/images/tuyen-truyen.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/dienbienhoabinh.jpg"
+                    src="/images/dien-bien-hoa-binh.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/luquetkyson.jpg"
+                    src="/images/lu-que-ky-son.jpg"
                     alt="..."
                 />
                 <img
-                    src="/images/luquetkyson2.jpg"
+                    src="/images/lu-que-ky-son-2.jpg"
                     alt="..."
                 />
                 <img
