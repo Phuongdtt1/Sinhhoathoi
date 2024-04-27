@@ -1,0 +1,61 @@
+<form name="quiz">
+<b> 1. Nội dung câu hỏi 1...</b>
+<ul style="margin-top: 1pt;"> 
+<input name="q1" type="radio" value="A" />A) Đáp án thứ nhất...</BR> 
+<input name="q1" type="radio" value="B" />B) Đáp án thứ hai...</BR> 
+<input name="q1" type="radio" value="C" />C) Đáp án thứ ba...</BR> 
+<input name="q1" type="radio" value="D" />D) Đáp án thứ tư...</BR>
+
+<b> 2. Nội dung câu hỏi 2...</b>
+<ul style="margin-top: 1pt;"> 
+<input name="q2" type="radio" value="A" />A) Đáp án thứ nhất...</BR> 
+<input name="q2" type="radio" value="B" />B) Đáp án thứ hai...</BR> 
+<input name="q2" type="radio" value="C" />C) Đáp án thứ ba...</BR> 
+<input name="q2" type="radio" value="D" />D) Đáp án thứ tư...</BR>
+
+<input onclick="getScore(this.form)" type="button" value="Xem kết quả" /> <input type="reset" value="Làm lại" /> Điểm đạt được = <strong><input class="bgclr" disabled="" name="percentage" size="5" type="text" /></strong> </BR>
+
+Đáp án: <textarea class="bgclr" cols="80" disabled="" name="solutions" rows="10" wrap="virtual"> </textarea> </ul> </ul>
+
+3) Để tạo câu hỏi thứ hai, thứ ba,... bạn làm tương tự bước 2 với lưu ý thay thế q1 (chỗ màu xanh) tương ứng thành thành q2, q3,...
+
+4) Cuối cùng bạn chép đoạn mã dưới đây vào sau đoạn mã trên
+
+<style type="text/css">
+.bgclr {background-color: white; color: blue; font-weight: bold;}
+</style> <script language="JavaScript">
+// Số câu hỏi 
+var numQues = m;
+//Số phương án trả lời 
+var numChoi = 4;
+//Số câu hỏi được hiển thị đáp án 
+var answers = new Array(M);
+// Đáp án đúng cho câu hỏi 
+answers[0] = "C"; 
+answers[1] = "A";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+     currElt = i*numChoi; 
+     for (j=0; j<numChoi; j++) {
+        currSelection = form.elements[currElt + j]; 
+        if (currSelection.checked) {
+           if (currSelection.value == answers[i]) {
+              score++; 
+              break;
+        }
+      }
+    }
+  }
+  score = Math.round(score/numQues*100); 
+  form.percentage.value = score + "%" ; 
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+     correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
