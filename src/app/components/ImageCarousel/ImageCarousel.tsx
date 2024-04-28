@@ -1,22 +1,21 @@
 import { Carousel } from 'flowbite-react';
 import React from 'react';
 
-export function ImageCarousel() {
+
+export function ImageCarousel({ urls }: { urls: string[] }) {
     return (
-        <div className="h-full">
+        <div className="h-[850px] my-4">
             <Carousel>
-                <img
-                    src="/images/3.jpg"
-                />
-                <img
-                    src="/images/4.jpg"
-                />
-                <img
-                    src="/images/6.jpg"
-                />
-                <img
-                    src="/images/7.jpg"
-                />
+                {
+                    urls.map(
+                        (name, index) => (
+                            <img
+                                key={index}
+                                src={name}
+                            />
+                        ),
+                    )
+                }
             </Carousel>
         </div>
     );
