@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const flowbite = require('flowbite-react/tailwind');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
     content: [
@@ -18,7 +19,11 @@ module.exports = {
                 '2xl': '1400px',
             },
         },
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ['var(--font-sans)', ...fontFamily.sans],
+            },
+        },
     },
     plugins: [
         flowbite.plugin(),
