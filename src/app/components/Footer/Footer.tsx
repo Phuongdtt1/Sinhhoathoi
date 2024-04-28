@@ -7,7 +7,6 @@ export function Footer() {
                     <li>Địa chỉ:</li>
                     <li>SDT</li>
                 </ul>
-
             </div>
         </footer>
     );
