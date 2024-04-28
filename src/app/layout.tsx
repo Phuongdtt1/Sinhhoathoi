@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 const fontSans = FontSans({
     subsets: ['latin'],
     variable: '--font-sans',
+    weight: ['100', '500', '900'],
 });
 
 export default function RootLayout({
