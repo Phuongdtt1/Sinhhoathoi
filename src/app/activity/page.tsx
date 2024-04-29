@@ -1,6 +1,6 @@
 'use client';
 
-import {VideoCard, VideoCardProps} from '@/app/components/VideoCard/VideoCard';
+import { VideoCard, VideoCardProps } from '@/app/components/VideoCard/VideoCard';
 
 const videos: VideoCardProps[] = [
     {
@@ -23,7 +23,7 @@ const videos: VideoCardProps[] = [
 const Activity = () => {
     return (
         <div className="container">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                 {videos.map((video, idx) => (
                     <VideoCard
                         key={idx}

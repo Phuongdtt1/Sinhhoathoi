@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Card } from 'flowbite-react';
 
 export interface VideoCardProps {
     title: string;
@@ -11,19 +10,22 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
-        <Card>
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <div
+            className="max-w-sm flex flex-col gap-2 p-6 shadow-md shadow-green-200 rounded-xl border-2"
+        >
+            <div
+                onClick={() => setShowVideo(true)}
+                className="cursor-pointer"
+            >
+                <iframe
+                    src={url}
+                    className="w-full aspect-video pointer-events-none"
+                ></iframe>
+            </div>
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 h-16">
                 {title}
             </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-                {content}
-            </p>
-            <button
-                onClick={() => setShowVideo(true)}
-                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-                Xem video {'>>'}
-            </button>
+            <p className="font-normal text-gray-700 dark:text-gray-400">{content}</p>
             {showVideo && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white max-h-screen p-2">
@@ -39,6 +41,6 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
                     </div>
                 </div>
             )}
-        </Card>
+        </div>
     );
 }

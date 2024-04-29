@@ -33,7 +33,7 @@ export default function RootLayout({
                     fontSans.variable,
                 )}
             >
-                <section className="flex min-h-screen flex-col justify-between">
+                <section className="flex min-h-screen flex-col justify-between gap-2">
                     <Header />
                     <div className="grow relative">{children}</div>
                     <Footer />

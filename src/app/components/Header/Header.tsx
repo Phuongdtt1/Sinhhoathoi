@@ -37,7 +37,7 @@ export function Header() {
                         <Navbar.Link
                             href="/login"
                             active={pathname == '/login'}
-                            className="md:text-base"
+                            className="md:text-xl"
                         >
                             Đăng nhập
                         </Navbar.Link>
@@ -45,7 +45,7 @@ export function Header() {
                             as={Link}
                             href="/image"
                             active={pathname == '/image'}
-                            className="md:text-base"
+                            className="md:text-xl"
                         >
                             Hình ảnh
                         </Navbar.Link>
@@ -53,7 +53,7 @@ export function Header() {
                             as={Link}
                             href="/activity"
                             active={pathname == '/activity'}
-                            className="md:text-base"
+                            className="md:text-xl"
                         >
                             Hoạt động
                         </Navbar.Link>
@@ -61,7 +61,7 @@ export function Header() {
                             as={Link}
                             href="/quiz"
                             active={pathname == '/quiz'}
-                            className="md:text-base"
+                            className="md:text-xl"
                         >
                             Trắc nghiệm
                         </Navbar.Link>
