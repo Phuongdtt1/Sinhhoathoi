@@ -33,9 +33,9 @@ export default function RootLayout({
                     fontSans.variable,
                 )}
             >
-                <section className="flex min-h-screen flex-col">
+                <section className="flex min-h-screen flex-col justify-between">
                     <Header />
-                    <div className="flex-1">{children}</div>
+                    <div className="grow relative">{children}</div>
                     <Footer />
                 </section>
             </body>

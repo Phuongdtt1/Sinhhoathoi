@@ -9,13 +9,13 @@ export function Header() {
     const pathname = usePathname();
     return (
         <header
-            className="bg-gray-100"
+            className="bg-green-100"
         >
             <div className="container">
                 <Navbar
                     fluid
                     rounded
-                    className="bg-gray-100"
+                    className="bg-green-100"
                     color="purple"
                 >
                     <Navbar.Brand
