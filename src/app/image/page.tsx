@@ -1,7 +1,7 @@
 'use client';
-import React, {useState} from 'react';
-import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
-import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
+import React, { useState } from 'react';
+import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 interface GroupImage {
     title: string,
@@ -154,6 +154,43 @@ const groupImages: GroupImage[] = [
 
         ],
     },
+    {
+        title: 'Nguồn Facebook',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb1.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb2.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb3.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb4.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb5.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb6.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb7.jpg',
+                title: 'Tiêu đề',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb8.jpg',
+                title: 'Tiêu đề',
+            },
+        ],
+    },
 ];
 
 const Image = () => {
@@ -184,7 +221,7 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls}/>
+            <ImageCarousel urls={womenImageUrls} />
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
@@ -192,7 +229,7 @@ const Image = () => {
                         onClick={() => toggleGroup(group.title)}
                     >
                         <div className="flex flex-row items-center gap-2">
-                            {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
+                            {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
                             <div>{group.title}</div>
                         </div>
                     </div>
@@ -206,7 +243,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{backgroundImage: `url(${image.url})`}}
+                                        style={{ backgroundImage: `url(${image.url})` }}
                                     />
                                     <div>{image.title}</div>
                                 </div>
