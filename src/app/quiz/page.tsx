@@ -1,6 +1,3 @@
-const numQues = 3;
-const numChoi = 4;
-var answers = new Array(3);
 const Quiz = () => {
     return (
 
@@ -33,7 +30,7 @@ const Quiz = () => {
                         name="q1"
                         type="radio"
                         value="A"
-                    />
+                    />&ensp;
                     A) là tổ chức chính trị – xã hội trong hệ thống chính trị,
                     đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự
                     phát triển của phụ nữ và bình đẳng giới
@@ -43,7 +40,7 @@ const Quiz = () => {
                         name="q1"
                         type="radio"
                         value="B"
-                    />
+                    />&ensp;
                     B) là tổ chức chính trị trong hệ thống chính trị, đại diện
                     cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát
                     triển của phụ nữ và bình đẳng giới
@@ -53,7 +50,7 @@ const Quiz = () => {
                         name="q1"
                         type="radio"
                         value="C"
-                    />
+                    />&ensp;
                     C) là tổ chức xã hội trong hệ thống chính trị, đại diện cho
                     quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển
                     của phụ nữ và bình đẳng giới
@@ -63,7 +60,7 @@ const Quiz = () => {
                         name="q1"
                         type="radio"
                         value="D"
-                    />
+                    />&ensp;
                     D) là tổ chức chính trị – xã hội nghề nghiệp trong hệ thống
                     chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn
                     đấu vì sự phát triển của phụ nữ và bình đẳng giới
@@ -77,7 +74,7 @@ const Quiz = () => {
                             name="q2"
                             type="radio"
                             value="A"
-                        />
+                        />&ensp;
                         A) Chính trị
                     </li>
                     <li>
@@ -85,7 +82,7 @@ const Quiz = () => {
                             name="q2"
                             type="radio"
                             value="B"
-                        />
+                        />&ensp;
                         B) Chính trị – xã hội
                     </li>
                     <li>
@@ -93,7 +90,7 @@ const Quiz = () => {
                             name="q2"
                             type="radio"
                             value="C"
-                        />
+                        />&ensp;
                         C) Xã hội nghề nghiệp
                     </li>
                     <li>
@@ -101,7 +98,7 @@ const Quiz = () => {
                             name="q2"
                             type="radio"
                             value="D"
-                        />
+                        />&ensp;
                         D) xã hội
                     </li>
                     <b className="bg-blue-600 text-white"> 3. : Đại hội đại biểu Phụ nữ toàn quốc lần thứ XIII dự kiến
@@ -115,7 +112,7 @@ const Quiz = () => {
                                 name="q3"
                                 type="radio"
                                 value="A"
-                            />
+                            />&ensp;
                             A) Ít nhất 05 chính sách, đề án và 02 chương trình.
                         </li>
                         <li>
@@ -123,7 +120,7 @@ const Quiz = () => {
                                 name="q3"
                                 type="radio"
                                 value="B"
-                            />
+                            />&ensp;
                             B) Ít nhất 04 chính sách, đề án và 03 chương trình.
                         </li>
                         <li>
@@ -131,7 +128,7 @@ const Quiz = () => {
                                 name="q3"
                                 type="radio"
                                 value="C"
-                            />
+                            />&ensp;
                             C) Ít nhất 03 chính sách, đề án và 02 chương trình.
                         </li>
                         <li>
@@ -139,21 +136,15 @@ const Quiz = () => {
                                 name="q3"
                                 type="radio"
                                 value="D"
-                            />
+                            />&ensp;
                             D) Ít nhất 02 chính sách, đề án và 05 chương trình.
                         </li>
                     </ul>
                 </ul>
             </ul>
             <div className="text-center bg-red-400 my-5 px-2 py-4 mx-48">
-                <h1 className="font-bold  text-2xl">
-                    Kết quả
-                </h1>
-                <input
-                    type="text"
-                    classname="text-center"
-                    value="5/10"
-                />
+                <h1 className="font-bold  text-2xl"> Kết quả </h1>
+                <input type="text" value="5/10"/>
                 Điểm
             </div>
         </form>
