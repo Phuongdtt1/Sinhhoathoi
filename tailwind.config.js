@@ -23,6 +23,9 @@ module.exports = {
             fontFamily: {
                 sans: ['var(--font-sans)', ...fontFamily.sans],
             },
+            aspectRatio: {
+                '4/3': '4 / 3',
+            },
         },
     },
     plugins: [
