@@ -1,24 +1,24 @@
 'use client';
 
-import { VideoCard, VideoCardProps } from '@/app/components/VideoCard/VideoCard';
-
+import {VideoCard, VideoCardProps} from '@/app/components/VideoCard/VideoCard';
 
 const videos: VideoCardProps[] = [
     {
-        title: 'Tiêu đề 1',
+
+        title: 'Tặng quà trị giá 200 triệu cho phụ nữ xã biên giới',
         content: 'Nội dung 1',
         url: 'https://drive.google.com/file/d/1JNkndDFvyj6RAICaBmcNxTAUaLxL9tPf/preview',
+
     }, {
-        title: 'Tiêu đề 2',
+        title: 'Đồng hành cùng mái ấm biên cương',
         content: 'Nội dung 2',
         url: 'https://drive.google.com/file/d/1bOGi2lkhT_Gk15EeJDyxlPNTHdlHimQX/preview',
     }, {
-        title: 'Tiêu đề 3',
+        title: 'Bát cháo tình thương tháng 1',
         content: 'Nội dung 3',
         url: 'https://drive.google.com/file/d/10fdMsEGCIONaYwDMpGNRzGej9LmXwFi7/preview',
     },
 ];
-
 
 const Activity = () => {
     return (
