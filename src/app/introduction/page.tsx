@@ -1,10 +1,11 @@
 const Home = () => {
     return (
-        <div className="grid gap-4 grid-cols-2">
+        <div className="grid md:grid-cols-2 grid-cols-1">
             <div className="p-4 bg-amber-100 text-blue-800 font-normal text-justify m-4">
                 <p className="text-bold text-white text-center bg-green-800 p-4"> * HỆ THỐNG TỔ CHỨC VÀ TƯ CÁCH PHÁP
                     NHÂN CỦA CÁC
-                    CẤP HỘI</p>
+                    CẤP HỘI
+                </p>
                 <ul>1. Hội Liên hiệp Phụ nữ Việt Nam gồm 4 cấp:
                     <li>&nbsp;&nbsp;&nbsp;&nbsp;a. Cấp Trung ương;</li>
                     <li>&nbsp;&nbsp;&nbsp;&nbsp;b. Cấp tỉnh (bao gồm Hội Liên hiệp Phụ nữ các tỉnh, thành phố trực thuộc
@@ -30,9 +31,9 @@ const Home = () => {
             </div>
             <div className="p-4 bg-amber-100 text-blue-800 font-normal text-justify m-4">
                 <p className="text-bold text-white text-center bg-green-800 p-4"> * CƠ QUAN LÃNH ĐẠO VÀ CƠ QUAN CHUYÊN
-                    TRÁCH CÁC CẤP HỘI</p>
+                    TRÁCH CÁC CẤP HỘI
+                </p>
                 <ul>1. Cơ quan lãnh đạo các cấp Hội:
-
                     <li>&nbsp;&nbsp;&nbsp;&nbsp; a. Cơ quan lãnh đạo cao nhất của Hội là Đại hội đại biểu Phụ nữ
                         toàn
                         quốc;</li>
