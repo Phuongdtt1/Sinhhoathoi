@@ -1,6 +1,6 @@
 export function Header() {
     return (
-        <header className="header bg-gray-200">
+        <header className="header bg-green-500 text-white">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a
                     href="/"

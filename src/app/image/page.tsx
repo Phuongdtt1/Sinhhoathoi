@@ -1,7 +1,7 @@
 'use client';
-import React, { useState } from 'react';
-import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import React, {useState} from 'react';
+import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 
 interface GroupImage {
     title: string,
@@ -12,8 +12,6 @@ interface GroupImage {
 }
 
 const womenImageUrls: string[] = [
-    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/1.jpg',
-    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/2.jpg',
     'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/3.jpg',
     'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/4.jpg',
     'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/5.jpg',
@@ -32,31 +30,69 @@ const groupImages: GroupImage[] = [
         title: 'Báo cáo viên',
         images: [
             {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc1.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324544/sinh_hoat_hoi/other/bcaovien.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: 'Hội thi Báo cáo viên giỏi năm 2023',
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324544/sinh_hoat_hoi/other/bcaovien2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bchung1.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: 'Hội thi Báo cáo viên giỏi năm 2023',
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bcv3.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: 'Hội thi Báo cáo viên giỏi năm 2023',
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bcv4.jpg',
+                title: 'Hội thi Báo cáo viên giỏi năm 2023',
+            },
+        ],
+    },
+    {
+        title: 'Bát nước thao trường',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc1.jpg',
+                title: 'Bát nước thao trường',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc2.jpg',
+                title: 'Bát nước thao trường',
+            },
+        ],
+    },
+    {
+        title: 'Võ thuật',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo1.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo2.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo3.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo4.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo5.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo6.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo7.jpg',
+                title: 'Bộ đội ở đâu đó. làm gì đó.',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo8.jpg',
                 title: 'Bộ đội ở đâu đó. làm gì đó.',
             },
         ],
@@ -65,11 +101,11 @@ const groupImages: GroupImage[] = [
         title: 'Kỳ Sơn', images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: 'Trao quà cho trẻ em vùng núi Kỳ Sơn',
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: 'Trao quà cho trẻ em vùng núi Kỳ Sơn',
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson3.jpg',
@@ -115,38 +151,7 @@ const groupImages: GroupImage[] = [
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-6.jpg',
                 title: 'Bộ đội ở đâu đó. làm gì đó.',
             },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo1.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo3.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo4.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo5.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo6.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo7.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo8.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
-            },
+
         ],
     },
 ];
@@ -179,7 +184,7 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls} />
+            <ImageCarousel urls={womenImageUrls}/>
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
@@ -187,7 +192,7 @@ const Image = () => {
                         onClick={() => toggleGroup(group.title)}
                     >
                         <div className="flex flex-row items-center gap-2">
-                            {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                            {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
                             <div>{group.title}</div>
                         </div>
                     </div>
@@ -201,7 +206,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{ backgroundImage: `url(${image.url})` }}
+                                        style={{backgroundImage: `url(${image.url})`}}
                                     />
                                     <div>{image.title}</div>
                                 </div>
