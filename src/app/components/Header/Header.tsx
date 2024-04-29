@@ -1,38 +1,72 @@
+'use client';
+
+import { Button, Navbar } from 'flowbite-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+
 export function Header() {
+    const pathname = usePathname();
     return (
-        <header className="header bg-gray-200">
-            <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a
-                    href="/"
-                    className="flex items-center"
+        <header
+            className="bg-gray-100"
+        >
+            <div className="container">
+                <Navbar
+                    fluid
+                    rounded
+                    className="bg-gray-100"
+                    color="purple"
                 >
-                    <img
-                        src="/images/logo.png"
-                        className="mr-3 h-6 sm:h-9"
-                        alt="Flowbite Logo"
-                    />
-                    <span className="self-center text-xl whitespace-nowrap dark:text-white">
-                        Sinh hoạt Hội
-                    </span>
-                </a>
-                <div>
-                    <button className="bg-blue-500 text-white text-center w-32 h-10 m-2">
-                        <a href="/login">
+                    <Navbar.Brand
+                        as={Link}
+                        href="/"
+                    >
+                        <Button
+                            color="purple"
+                        >
+                            <img
+                                src="/images/logo.png"
+                                className="mr-3 h-9"
+                            />
+                            <div className="text-xl self-center">SINH HOẠT HỘI</div>
+                        </Button>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                    <Navbar.Collapse>
+                        <Navbar.Link
+                            href="/login"
+                            active={pathname == '/login'}
+                            className="md:text-base"
+                        >
                             Đăng nhập
-                        </a>
-                    </button>
-                    <button className="bg-blue-500 text-white text-center w-32 h-10 m-2">
-                        <a href="/image">
+                        </Navbar.Link>
+                        <Navbar.Link
+                            as={Link}
+                            href="/image"
+                            active={pathname == '/image'}
+                            className="md:text-base"
+                        >
                             Hình ảnh
-                        </a>
-                    </button>
-                    <button className="bg-blue-500 text-white text-center w-32 h-10 m-2">
-                        <a href="/quiz">
+                        </Navbar.Link>
+                        <Navbar.Link
+                            as={Link}
+                            href="/activity"
+                            active={pathname == '/activity'}
+                            className="md:text-base"
+                        >
+                            Hoạt động
+                        </Navbar.Link>
+                        <Navbar.Link
+                            as={Link}
+                            href="/quiz"
+                            active={pathname == '/quiz'}
+                            className="md:text-base"
+                        >
                             Trắc nghiệm
-                        </a>
-                    </button>
-                </div>
-            </div>
+                        </Navbar.Link>
+                    </Navbar.Collapse>
+                </Navbar></div>
         </header>
     );
 }
