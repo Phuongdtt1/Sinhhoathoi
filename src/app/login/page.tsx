@@ -1,8 +1,9 @@
 'use client';
 
-import { Button, Label, TextInput } from 'flowbite-react';
+import {Button, Label, TextInput} from 'flowbite-react';
 
 export default function Component() {
+    // @ts-ignore
     return (
         <div className="absolute inset-0 flex items-center justify-center">
             <form className="flex max-w-md min-w-80 flex-col gap-4">
@@ -41,7 +42,9 @@ export default function Component() {
                 <Button
                     type="submit"
                     size="lg"
+                    href="/quiz"
                 >Vào Thi</Button>
+
             </form>
         </div>
     );

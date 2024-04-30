@@ -1,7 +1,7 @@
 'use client';
-import React, { useState } from 'react';
-import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import React, {useState} from 'react';
+import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 
 interface GroupImage {
     title: string,
@@ -27,89 +27,89 @@ const womenImageUrls: string[] = [
 
 const groupImages: GroupImage[] = [
     {
-        title: 'Báo cáo viên',
+        title: 'Hội thi Báo cáo viên giỏi toàn quân năm 2023',
         images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324544/sinh_hoat_hoi/other/bcaovien.jpg',
-                title: 'Hội thi Báo cáo viên giỏi năm 2023',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324544/sinh_hoat_hoi/other/bcaovien2.jpg',
-                title: 'Hội thi Báo cáo viên giỏi năm 2023',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bcv3.jpg',
-                title: 'Hội thi Báo cáo viên giỏi năm 2023',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bcv4.jpg',
-                title: 'Hội thi Báo cáo viên giỏi năm 2023',
+                title: ''
             },
         ],
     },
     {
-        title: 'Bát nước thao trường',
+        title: 'Chiều 28/7/2022, Hội phụ nữ BĐBP Nghệ An tổ chức chương trình "Bát nước thao trường" và "Bữa cơm dinh dưỡng" phục vụ cán bộ, chiến sĩ đang thực hiện nhiệm vụ phục vụ diễn tập năm 2022',
         images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc1.jpg',
-                title: 'Bát nước thao trường',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc2.jpg',
-                title: 'Bát nước thao trường',
+                title: ''
             },
         ],
     },
     {
-        title: 'Võ thuật',
+        title: 'Những nữ chiến sĩ biên phòng xinh đẹp biểu diễn võ thuật, khí công Trong lễ ra quân huấn luyện năm 2024',
         images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo1.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo3.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo4.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo5.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo6.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo7.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo8.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
         ],
     },
     {
-        title: 'Kỳ Sơn', images: [
+        title: 'Trao quà cho các học sinh vùng núi đặc biệt khó khăn tuyến Kỳ Sơn', images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson.jpg',
-                title: 'Trao quà cho trẻ em vùng núi Kỳ Sơn',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson2.jpg',
-                title: 'Trao quà cho trẻ em vùng núi Kỳ Sơn',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson3.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
         ],
     },
@@ -117,39 +117,43 @@ const groupImages: GroupImage[] = [
         title: 'Còn lại', images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-1.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-3.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
+
+        ],
+        title: 'Còn lại', images: [
+
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-1.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-2.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-3.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-4.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-5.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-6.jpg',
-                title: 'Bộ đội ở đâu đó. làm gì đó.',
+                title: ''
             },
 
         ],
@@ -159,35 +163,35 @@ const groupImages: GroupImage[] = [
         images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb1.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb2.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb3.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb4.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb5.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb6.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb7.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb8.jpg',
-                title: 'Tiêu đề',
+                title: ''
             },
         ],
     },
@@ -221,7 +225,7 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls} />
+            <ImageCarousel urls={womenImageUrls}/>
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
@@ -229,7 +233,7 @@ const Image = () => {
                         onClick={() => toggleGroup(group.title)}
                     >
                         <div className="flex flex-row items-center gap-2">
-                            {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                            {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
                             <div>{group.title}</div>
                         </div>
                     </div>
@@ -243,7 +247,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{ backgroundImage: `url(${image.url})` }}
+                                        style={{backgroundImage: `url(${image.url})`}}
                                     />
                                     <div>{image.title}</div>
                                 </div>

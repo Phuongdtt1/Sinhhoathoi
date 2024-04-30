@@ -12,22 +12,12 @@ export default function Home() {
             </Link>
             <Link
                 className="rounded-2xl bg-purple-500 text-white p-5 w-52 text-center"
-                href="/image"
+                href="/huongdan"
             >
-                Hình ảnh
+                Hướng dẫn thi trắc nghiệm
             </Link>
-            <Link
-                className="rounded-2xl bg-green-500 text-white p-5 w-52 text-center"
-                href="/activity"
-            >
-                Hoạt động
-            </Link>
-            <Link
-                className="rounded-2xl bg-blue-500 text-white p-5 w-52 text-center"
-                href="/quiz"
-            >
-                Trắc nghiệm
-            </Link>
+            
+
         </div>
     );
 
