@@ -14,7 +14,7 @@ const Quiz = () => {
         <div className="container flex flex-col items-center justify-evenly h-96">
             <Link
                 className="rounded-2xl bg-red-500 text-white p-5 w-52 text-center"
-                href={`/quiz/quiz1?name=${name}&unit=${unit}`}
+                href={`/quiz/1?name=${name}&unit=${unit}`}
             >
                 Cuộc thi tim hiểu
                 Điều lệ Hội liên hiệp phụ nữ Việt nam khóa
