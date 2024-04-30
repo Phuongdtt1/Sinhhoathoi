@@ -1,12 +1,25 @@
 'use client';
 
-import {Button, Label, TextInput} from 'flowbite-react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Button, Label, TextInput } from 'flowbite-react';
 
 export default function Component() {
-    // @ts-ignore
+    const [name, setName] = useState('');
+    const [unit, setUnit] = useState('');
+    const router = useRouter();
+
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
+        event.preventDefault();
+        router.push(`/quiz?name=${name}&unit=${unit}`);
+    };
+
     return (
         <div className="absolute inset-0 flex items-center justify-center">
-            <form className="flex max-w-md min-w-80 flex-col gap-4">
+            <form
+                className="flex max-w-md min-w-80 flex-col gap-4"
+                onSubmit={handleSubmit}
+            >
                 <div>
                     <div className="mb-2 block">
                         <Label
@@ -21,6 +34,8 @@ export default function Component() {
                         placeholder="Ví dụ: Nguyễn Văn A"
                         sizing="lg"
                         required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </div>
                 <div>
@@ -37,14 +52,14 @@ export default function Component() {
                         placeholder="Ví dụ: Bộ đội biên phòng tỉnh Nghệ An"
                         sizing="lg"
                         required
+                        value={unit}
+                        onChange={(e) => setUnit(e.target.value)}
                     />
                 </div>
                 <Button
                     type="submit"
                     size="lg"
-                    href="/quiz"
                 >Vào Thi</Button>
-
             </form>
         </div>
     );
