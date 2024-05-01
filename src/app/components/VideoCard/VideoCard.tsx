@@ -11,7 +11,7 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
 
     return (
         <div
-            className="max-w-sm flex flex-col gap-2 p-6 shadow-md shadow-green-200 rounded-xl border-2"
+            className="flex flex-col gap-2 p-6 shadow-md shadow-green-200 rounded-xl border-2"
         >
             <div
                 onClick={() => setShowVideo(true)}
@@ -22,16 +22,16 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
                     className="w-full aspect-video pointer-events-none"
                 ></iframe>
             </div>
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 h-16">
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900">
                 {title}
             </h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">{content}</p>
             {showVideo && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-                    <div className="bg-white max-h-screen p-2">
+                    <div className="bg-white w-full p-1">
                         <iframe
                             src={url}
-                            className="h-[95vh] aspect-video"
+                            className="w-full max-h-[calc(100vh-0.5rem)] aspect-video"
                             allow="autoplay"
                         ></iframe>
                         <button

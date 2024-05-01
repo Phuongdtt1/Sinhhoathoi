@@ -224,7 +224,7 @@ const Image = () => {
             ))}
             {modalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-                    <div className="bg-white max-h-screen p-2">
+                    <div className="bg-white max-h-screen p-1">
                         <img
                             className="max-h-[95vh]"
                             src={currentImageUrl}
@@ -232,7 +232,7 @@ const Image = () => {
                         />
                         <button
                             onClick={closeModal}
-                            className="absolute top-1 right-1 text-3xl text-black rounded-full bg-white size-10 border"
+                            className="absolute top-1 right-1 text-2xl text-black rounded-full bg-white size-10 border"
                         >&times;</button>
                     </div>
                 </div>

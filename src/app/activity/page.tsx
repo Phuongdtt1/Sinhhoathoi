@@ -1,6 +1,6 @@
 'use client';
 
-import {VideoCard, VideoCardProps} from '@/app/components/VideoCard/VideoCard';
+import { VideoCard, VideoCardProps } from '@/app/components/VideoCard/VideoCard';
 
 const videos: VideoCardProps[] = [
     {
