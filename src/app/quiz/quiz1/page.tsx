@@ -1,7 +1,7 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
-import { Button } from 'flowbite-react';
+import {useSearchParams} from 'next/navigation';
+import {Button} from 'flowbite-react';
 
 
 const Quiz1 = () => {
@@ -20,11 +20,11 @@ const Quiz1 = () => {
                 XVIII
             </h1>
             <div className="m-8 bg-amber-50 p-4 text-justify">
-                <strong>1a. Theo Điều lệ Hội liên hiệp phụ nữ Việt Nam hiện hành thì Hội
+                <strong>1. Theo Điều lệ Hội liên hiệp phụ nữ Việt Nam hiện hành thì Hội
                     Liên hiệp Phụ nữ Việt Nam?
                 </strong>
                 <ul>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q1"
                             type="radio"
@@ -71,9 +71,9 @@ const Quiz1 = () => {
                         phấn
                         đấu vì sự phát triển của phụ nữ và bình đẳng giới
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>2b. Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp
+                <strong>2. Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp
                     Phụ nữ Việt Nam là tổ chức gì?
                 </strong>
                 <ul>
@@ -113,14 +113,14 @@ const Quiz1 = () => {
                         &ensp;
                         D) xã hội
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>3a : Đại hội đại biểu Phụ nữ toàn quốc lần thứ XIII dự kiến đến cuối
+                <strong>3. Đại hội đại biểu Phụ nữ toàn quốc lần thứ XIII dự kiến đến cuối
                     nhiệm kỳ, Trung ương Hội sẽ đề xuất thành công ít nhất bao nhiêu chính sách,
                     đề án và bao nhiêu chương trình?
                 </strong>
                 <ul>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q3"
                             type="radio"
@@ -157,7 +157,7 @@ const Quiz1 = () => {
                         D) Ít nhất 02 chính sách, đề án và 05 chương trình.
                     </li>
                 </ul>
-                <strong>4b. Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Nhiệm kỳ của Ban Chấp hành, Ban
+                <strong>4. Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Nhiệm kỳ của Ban Chấp hành, Ban
                     Thường vụ, Chủ tịch và Phó Chủ tịch được chỉ định:
                 </strong>
                 <ul>
@@ -170,7 +170,7 @@ const Quiz1 = () => {
                         &ensp;
                         A) Phải đảm bảo đủ năm năm.
                     </li>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q4"
                             type="radio"
@@ -197,12 +197,12 @@ const Quiz1 = () => {
                         &ensp;
                         D) Không nhất thiết đủ năm năm, nhưng phải đảm bảo ít nhất 36 tháng.
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>5a. Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Chi hội, tổ phụ nữ sinh hoạt:
+                <strong>5. Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Chi hội, tổ phụ nữ sinh hoạt:
                 </strong>
                 <ul>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q5"
                             type="radio"
@@ -238,9 +238,9 @@ const Quiz1 = () => {
                         &ensp;
                         D) Ít nhất Sáu tháng một lần.
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>6c. Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp Phụ nữ Việt Nam có chức
+                <strong>6. Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp Phụ nữ Việt Nam có chức
                     năng nào dưới đây?
                 </strong>
                 <ul>
@@ -266,7 +266,7 @@ const Quiz1 = () => {
                         của
                         Nhà nước; vận động xã hội thực hiện bình đẳng giới.
                     </li>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q6"
                             type="radio"
@@ -284,9 +284,9 @@ const Quiz1 = () => {
                         &ensp;
                         D) Cả phương án A và B đều sai
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>7d. Theo quy định Điều lệ và Hướng dẫn thực hiện Điều lệ Hội hiện hành, các đối tượng nào dưới
+                <strong>7. Theo quy định Điều lệ và Hướng dẫn thực hiện Điều lệ Hội hiện hành, các đối tượng nào dưới
                     đây là hội viên đương nhiên của Hội Liên hiệp Phụ nữ Việt Nam?
                 </strong>
                 <ul>
@@ -317,7 +317,7 @@ const Quiz1 = () => {
                         &ensp;
                         C) Phụ nữ trong các tổ chức thành viên của Hội
                     </li>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q7"
                             type="radio"
@@ -326,9 +326,9 @@ const Quiz1 = () => {
                         &ensp;
                         D) Cả 3 đáp án trên
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>8d. Ngày 30/06/2017 Thủ tướng Chính phủ phê duyệt đề án nào do TW Hội LHPN Việt Nam đề xuất.
+                <strong>8. Ngày 30/06/2017 Thủ tướng Chính phủ phê duyệt đề án nào do TW Hội LHPN Việt Nam đề xuất.
                 </strong>
                 <ul>
                     <li>
@@ -359,7 +359,7 @@ const Quiz1 = () => {
                         &ensp;
                         C) Đề án “Hỗ trợ phụ nữ phát triển sinh kế bền vững giai đoạn 2017-2025”
                     </li>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q8"
                             type="radio"
@@ -368,9 +368,9 @@ const Quiz1 = () => {
                         &ensp;
                         D) Phương án a và b
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>9c. Chương trình Đồng hành cùng phụ nữ biên cương được BCH Trung ương Hội LHPN Việt Nam quyết
+                <strong>9. Chương trình Đồng hành cùng phụ nữ biên cương được BCH Trung ương Hội LHPN Việt Nam quyết
                     định là?
                 </strong>
                 <ul>
@@ -392,7 +392,7 @@ const Quiz1 = () => {
                         &ensp;
                         B) Đề án được thực hiện từ năm 2018 – 2020.
                     </li>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q9"
                             type="radio"
@@ -410,9 +410,9 @@ const Quiz1 = () => {
                         &ensp;
                         D) Đề tài được thực hiện từ năm 2018 – 2020.
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <strong>10d. Hội LHPN Việt Nam trong giai đoạn hiện nay có những nhiệm vụ gì?
+                <strong>10. Hội LHPN Việt Nam trong giai đoạn hiện nay có những nhiệm vụ gì?
                 </strong>
                 <ul>
                     <li>
@@ -449,7 +449,7 @@ const Quiz1 = () => {
                         C) Xây dựng, phát triển tổ chức Hội vững mạnh và Đoàn kết, hợp tác với phụ nữ các nước, các tổ
                         chức, cá nhân tiến bộ trên thế giới vì bình đẳng, phát triển và hòa bình
                     </li>
-                    <li className="text-red-300">
+                    <li>
                         <input
                             name="q10"
                             type="radio"
@@ -458,7 +458,7 @@ const Quiz1 = () => {
                         &ensp;
                         D) Tất cả các phương án trên
                     </li>
-                    <br />
+                    <br/>
                 </ul>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 bg-red-200 p-8">

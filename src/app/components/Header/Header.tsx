@@ -40,6 +40,14 @@ export function Header() {
                             active={pathname == '/login'}
                             className="md:text-xl"
                         >
+                            Hướng dẫn
+                        </Navbar.Link>
+                        <Navbar.Link
+                            as={Link}
+                            href="/login"
+                            active={pathname == '/login'}
+                            className="md:text-xl"
+                        >
                             Đăng nhập
                         </Navbar.Link>
                         <Navbar.Link
