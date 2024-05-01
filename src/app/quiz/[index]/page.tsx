@@ -1,9 +1,9 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
-import { Button } from 'flowbite-react';
-import { quizs } from '@/app/resources/QuizData';
-import { FormEvent, useState } from 'react';
+import {useSearchParams} from 'next/navigation';
+import {Button} from 'flowbite-react';
+import {quizs} from '@/app/resources/QuizData';
+import {FormEvent, useState} from 'react';
 
 interface Answer {
     text: string;
@@ -24,7 +24,7 @@ interface ContestProps {
     params: { index: number };
 }
 
-const Contest = ({ params }: ContestProps) => {
+const Contest = ({params}: ContestProps) => {
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({});
     const [score, setScore] = useState(0);
     const quiz: Quiz = quizs[params.index];
@@ -94,7 +94,7 @@ const Contest = ({ params }: ContestProps) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 bg-red-200 p-8">
                 <div>
                     <div className="text-2xl mb-4">
-                        <span className="font-bold">Anh/Chị: {' '}</span>
+                        <span className="font-bold">Họ và tên: {' '}</span>
                         {name}
                     </div>
                     <div className="text-2xl">
