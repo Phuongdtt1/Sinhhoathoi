@@ -95,7 +95,7 @@ export default function Home() {
             >
                 <img
                     className="rounded-2xl bg-red-500 text-white w-full text-center"
-                    src="/images/nen.jpg"
+                    src="/images/background.jpg"
                 />
             </Link>
         </div>

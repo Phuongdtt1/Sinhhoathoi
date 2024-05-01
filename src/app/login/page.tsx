@@ -1,8 +1,8 @@
 'use client';
 
-import {useState} from 'react';
-import {useRouter} from 'next/navigation';
-import {Button, Label, TextInput} from 'flowbite-react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Button, Label, TextInput } from 'flowbite-react';
 
 export default function Component() {
     const [name, setName] = useState('');
