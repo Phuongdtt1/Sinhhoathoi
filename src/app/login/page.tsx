@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { Button, Label, TextInput } from 'flowbite-react';
+import {useState} from 'react';
+import {useRouter} from 'next/navigation';
+import {Button, Label, TextInput} from 'flowbite-react';
 
 export default function Component() {
     const [name, setName] = useState('');
@@ -34,6 +34,8 @@ export default function Component() {
                         placeholder="Ví dụ: Nguyễn Văn A"
                         sizing="lg"
                         required
+                        //oninvalid="this.setCustomValidity('Họ tên không được trống')"
+                        //oninput="setCustomValidity('')"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
