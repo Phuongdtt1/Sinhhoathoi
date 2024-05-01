@@ -35,7 +35,7 @@ export default function RootLayout({
             >
                 <section className="flex min-h-screen flex-col justify-between gap-2">
                     <Header />
-                    <div className="grow relative">{children}</div>
+                    <div className="flex-1 relative">{children}</div>
                     <Footer />
                 </section>
             </body>

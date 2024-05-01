@@ -1,8 +1,8 @@
 'use client';
 
-import {Button, Navbar} from 'flowbite-react';
+import { Button, Navbar } from 'flowbite-react';
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 
 export function Header() {
@@ -32,12 +32,12 @@ export function Header() {
                             <div className="text-xl self-center">SINH HOẠT HỘI</div>
                         </Button>
                     </Navbar.Brand>
-                    <Navbar.Toggle/>
+                    <Navbar.Toggle />
                     <Navbar.Collapse>
                         <Navbar.Link
                             as={Link}
-                            href="/login"
-                            active={pathname == '/login'}
+                            href="/guide"
+                            active={pathname == '/guide'}
                             className="md:text-xl"
                         >
                             Hướng dẫn
