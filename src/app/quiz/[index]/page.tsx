@@ -4,6 +4,8 @@ import { useSearchParams } from 'next/navigation';
 import { Button } from 'flowbite-react';
 import { quizs } from '@/app/resources/QuizData';
 import { FormEvent, useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 interface Answer {
     text: string;
@@ -42,11 +44,21 @@ const Contest = ({ params }: ContestProps) => {
 
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
-        const isComplete = quiz.questions.every((_, index) => selectedAnswers[index] !== undefined);
-        if (!isComplete) {
-            alert('Hãy điền đủ mới nộp bài');
+        const unansweredQuestions: number[] = [];
+        quiz.questions.forEach((_, index) => {
+            if (selectedAnswers[index] === undefined) {
+                unansweredQuestions.push(index + 1); // +1 to make it human-readable (not zero-based)
+            }
+        });
+
+        if (unansweredQuestions.length > 0) {
+            const questionList = unansweredQuestions.join(', ');
+            toast.error(`Bạn chưa trả lời câu hỏi số: ${questionList}`, {
+                position: 'top-center',
+            });
             return;
         }
+
         let newScore = 0;
         quiz.questions.forEach((question, index) => {
             if (selectedAnswers[index] !== undefined && question.answers[selectedAnswers[index]].correct) {
@@ -54,6 +66,9 @@ const Contest = ({ params }: ContestProps) => {
             }
         });
         setScore(newScore);
+        toast.success(`Điểm số của bạn là: ${newScore}`, {
+            position: 'top-center',
+        });
     };
 
     return (
