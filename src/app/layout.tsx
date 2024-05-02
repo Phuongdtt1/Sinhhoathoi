@@ -4,7 +4,6 @@ import './globals.css';
 import { Header } from '@/app/components/Header/Header';
 import { Footer } from '@/app/components/Footer/Footer';
 import { cn } from '@/app/lib/utils';
-import { Suspense } from 'react';
 
 
 export const metadata: Metadata = {
@@ -24,25 +23,23 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <Suspense>
-            <html
-                lang="en"
+        <html
+            lang="en"
+        >
+            <body
+                className={cn(
+                    'min-h-screen bg-background font-sans text-xl tracking-tight antialiased',
+                    fontSans.variable,
+                )}
                 suppressHydrationWarning
             >
-                <body
-                    className={cn(
-                        'min-h-screen bg-background font-sans text-xl tracking-tight antialiased',
-                        fontSans.variable,
-                    )}
-                >
-                    <section className="flex min-h-screen flex-col justify-between gap-2">
-                        <Header />
-                        <div className="flex-1 relative">{children}</div>
-                        <Footer />
-                    </section>
-                </body>
-            </html>
-        </Suspense>
+                <section className="flex min-h-screen flex-col justify-between gap-2">
+                    <Header />
+                    <div className="flex-1 relative">{children}</div>
+                    <Footer />
+                </section>
+            </body>
+        </html>
     )
         ;
 }
