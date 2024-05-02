@@ -4,7 +4,8 @@ import './globals.css';
 import { Header } from '@/app/components/Header/Header';
 import { Footer } from '@/app/components/Footer/Footer';
 import { cn } from '@/app/lib/utils';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 export const metadata: Metadata = {
     title: 'Sinh Hoạt Hội',
@@ -38,6 +39,7 @@ export default function RootLayout({
                     <div className="flex-1 relative">{children}</div>
                     <Footer />
                 </section>
+                <ToastContainer />
             </body>
         </html>
     )
