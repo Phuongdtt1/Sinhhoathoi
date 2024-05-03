@@ -12,7 +12,7 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
     return (
 
         <div
-            className="flex flex-col gap-2 p-6 shadow-md shadow-green-200 rounded-xl border-2"
+            className="flex flex-col gap-2 p-6 shadow-md rounded-xl border-2"
         >
             <div
                 onClick={() => setShowVideo(true)}

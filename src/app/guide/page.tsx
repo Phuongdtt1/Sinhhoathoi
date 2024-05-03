@@ -26,16 +26,15 @@ export default function Guide() {
                 <Link href="/quiz">
                     <img
                         className="rounded-2xl bg-red-500 text-white"
-                        src="/images/background.jpg"
+                        src="/images/banner.jpg"
                     />
                 </Link>
             </div>
             <div className="text-purple-500 text-4xl font-bold m-4">
                 Hướng dẫn thi trắc nghiệm
             </div>
-
             <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mb-8">
-                {Array.from({length: 4}, (_, index) => (
+                {Array.from({ length: 4 }, (_, index) => (
                     <img
                         key={index}
                         src={`https://res.cloudinary.com/ezcode97/image/upload/v1714494660/sinh_hoat_hoi/huong_dan/${index + 1}.jpg`}

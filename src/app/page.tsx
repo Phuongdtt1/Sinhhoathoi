@@ -1,9 +1,9 @@
 'use client';
 
-import {Button, Label, TextInput} from 'flowbite-react';
-import {useRouter} from 'next/navigation';
-import {useAtom} from 'jotai';
-import {isLoggedInAtom, nameAtom, unitAtom} from '@/app/atoms';
+import { Button, Label, TextInput } from 'flowbite-react';
+import { useRouter } from 'next/navigation';
+import { useAtom } from 'jotai';
+import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
 
 export default function Home() {
     const [name, setName] = useAtom(nameAtom);
@@ -21,9 +21,9 @@ export default function Home() {
         <div
             className="absolute inset-0 flex items-center justify-center"
         >
-            <div
-                className="absolute z-[-1] opacity-50 inset-0 bg-no-repeat bg-cover bg-center"
-                style={{backgroundImage: 'url(\'/images/Backropnenwhite.png\')'}}
+            <img
+                className="absolute z-[-1] opacity-50 w-full h-full"
+                src="/images/background.png"
             />
             <form
                 className="flex max-w-md min-w-80 flex-col gap-4"

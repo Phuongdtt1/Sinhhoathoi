@@ -2,11 +2,12 @@
 
 import { Button } from 'flowbite-react';
 import { QuizData, quizs } from '@/app/resources/QuizData';
-import { FormEvent, useState } from 'react';
+import { FormEvent, ReactElement, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useAtom } from 'jotai';
 import { nameAtom, unitAtom } from '@/app/atoms';
+import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
 
 interface ContestProps {
     params: { index: number };
@@ -34,6 +35,7 @@ const Contest = ({ params }: ContestProps) => {
     const quiz: QuizData = quizs[params.index];
     const [name] = useAtom(nameAtom);
     const [unit] = useAtom(unitAtom);
+    const [fireworks, setFireworks] = useState<ReactElement[]>([]);
 
     const handleAnswerChange = (questionIndex: number, answerIndex: number) => {
         setSelectedAnswers({
@@ -69,6 +71,9 @@ const Contest = ({ params }: ContestProps) => {
         const resultMessage = getResultMessage(percentageCorrect);
 
         toast.success(`${resultMessage} Điểm số: ${newScore}/${totalQuestions}`);
+        if (percentageCorrect == 100) {
+            setFireworks(fireworks.concat(<Fireworks autorun={{ speed: 3, duration: 3000 }} />));
+        }
     };
 
     return (
@@ -123,6 +128,7 @@ const Contest = ({ params }: ContestProps) => {
                             type="submit"
                             size="lg"
                         >Nộp Bài</Button>
+                        {fireworks}
                         <input
                             type="text"
                             id="disabled-input"
