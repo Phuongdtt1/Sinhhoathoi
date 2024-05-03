@@ -1,7 +1,7 @@
 'use client';
-import React, {useState} from 'react';
-import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
-import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
+import React, { useState } from 'react';
+import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 interface GroupImage {
     title: string,
@@ -193,7 +193,7 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls}/>
+            <ImageCarousel urls={womenImageUrls} />
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
@@ -201,7 +201,7 @@ const Image = () => {
                         onClick={() => toggleGroup(group.title)}
                     >
                         <div className="flex flex-row items-center gap-2">
-                            {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
+                            {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
                             <div>{group.title}</div>
                         </div>
                     </div>
@@ -215,7 +215,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{backgroundImage: `url(${image.url})`}}
+                                        style={{ backgroundImage: `url(${image.url})` }}
                                     />
                                 </div>
                             ))}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 export interface VideoCardProps {
     title: string;
@@ -6,7 +6,7 @@ export interface VideoCardProps {
     url: string;
 }
 
-export function VideoCard({title, content, url}: VideoCardProps) {
+export function VideoCard({ title, content, url }: VideoCardProps) {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
@@ -42,8 +42,6 @@ export function VideoCard({title, content, url}: VideoCardProps) {
                     </div>
                 </div>
             )}
-
-
         </div>
     )
         ;

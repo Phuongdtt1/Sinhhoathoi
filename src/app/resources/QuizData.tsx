@@ -226,8 +226,6 @@ export const quizs: QuizData[] = [
 
         ],
     },
-
-
     {
         'quizTitle': 'Cuộc thi tim hiểu Điều lệ Hội liên hiệp phụ nữ Việt nam khóa XVIII',
         'questions': [
@@ -444,5 +442,4 @@ export const quizs: QuizData[] = [
 
         ],
     },
-
-]
+];

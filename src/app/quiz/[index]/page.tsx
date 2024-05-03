@@ -1,11 +1,11 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
-import { Button } from 'flowbite-react';
-import { quizs } from '@/app/resources/QuizData';
-import { FormEvent, useState } from 'react';
+import {useSearchParams} from 'next/navigation';
+import {Button} from 'flowbite-react';
+import {quizs} from '@/app/resources/QuizData';
+import {FormEvent, useState} from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify';
+import {toast} from 'react-toastify';
 
 interface Answer {
     text: string;

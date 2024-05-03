@@ -13,8 +13,6 @@ export default function Guide() {
                         Hướng dẫn thi trắc nghiệm
                     </p>
                 </Link>
-
-
                 <img
                     src="https://res.cloudinary.com/ezcode97/image/upload/v1714494660/sinh_hoat_hoi/huong_dan/1.jpg"
                     title="nhấn 3 gạch/họ tên/đơn vị/vào thi"
@@ -44,7 +42,7 @@ export default function Guide() {
                         tin
                         mạng
                     </Link>
-                    <br/>
+                    <br />
                     <Link
                         href="https://hoilhpn.org.vn/documents/20182/0/_VB_1713259272222_VB_3222-CV%202024.pdf/5d060488-8411-4cd8-92fb-316a2c7b617e"
                         className="hover:underline hover:text-blue-700 text-blue-500"
@@ -53,14 +51,14 @@ export default function Guide() {
                         30/4-/1/5
                         và cao điểm du lịch hè 2024
                     </Link>
-                    <br/>
+                    <br />
                     <Link
                         href="https://hoilhpn.org.vn/tin-chi-tiet/-/chi-tiet/%C4%91ieu-le-hoi-lien-hiep-phu-nu-viet-nam-46760-6801.html"
                         className="hover:underline hover:text-blue-700 text-blue-500"
                     >
                         {'->'} Điều lệ Hội Liên hiệp phụ nữ Việt Nam khóa XVIII
                     </Link>
-                    <br/>
+                    <br />
                     <Link
                         href="https://hoilhpn.org.vn/documents/20182/0/_VB_1692093800943_VB_2494-Q%C4%90-HTPNPTKT.pdf/b9612f2c-37e3-467f-b812-393e111a291c"
                         className="hover:underline hover:text-blue-700 text-blue-500"
