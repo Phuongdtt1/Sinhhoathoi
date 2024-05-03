@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
-import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import { VideoCard, VideoCardProps } from '@/app/components/VideoCard/VideoCard';
+import React, {useState} from 'react';
+import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
+import {VideoCard, VideoCardProps} from '@/app/components/VideoCard/VideoCard';
 import Link from 'next/link';
 
 interface GroupImage {
@@ -213,7 +213,7 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls} />
+            <ImageCarousel urls={womenImageUrls}/>
             <div className="text-2xl font-bold my-4">VIDEO HỌẠT ĐỘNG</div>
             <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                 {videos.map((video, idx) => (
@@ -225,7 +225,7 @@ const Image = () => {
                     />
                 ))}
             </div>
-            <div className="text-2xl font-bold my-4">HÌNH ẢNH HỘI THI</div>
+            <div className="text-2xl font-bold my-4">HÌNH ẢNH</div>
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
@@ -234,7 +234,7 @@ const Image = () => {
                     >
                         <div className="flex flex-row items-start gap-2">
                             <div>
-                                {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                                {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
                             </div>
                             <div className={isExpanded(group.title) ? '' : 'truncate'}>{group.title}</div>
                         </div>
@@ -249,7 +249,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{ backgroundImage: `url(${image.url})` }}
+                                        style={{backgroundImage: `url(${image.url})`}}
                                     />
                                 </div>
                             ))}
@@ -273,34 +273,34 @@ const Image = () => {
                 </div>
             )}
             <div className="border-blue-900">
-                <div className="text-2xl font-bold mt-4">TIN TỨC-SỰ KIỆN</div>
+                <div className="text-2xl font-bold mt-4">TIN TỨC</div>
                 <p className="my-4">
                     <Link
                         href="https://www.bienphong.com.vn/sang-dep-hinh-anh-nu-quan-nhan-bdbp-post473259.html"
-                        className="hover:underline hover:text-blue-700 text-blue-500"
+                        className="underline hover:text-bold hover:text-blue-700 text-blue-500"
                     >
                         {'->'} Sáng đẹp hình ảnh nữ Quân nhân BĐBP
                     </Link>
-                    <br />
+                    <br/>
                     <Link
                         href="https://mattrannghean.org.vn/cms/portal/read/cac-phong-trao-thi-dua-khac/news/phu-nu-nghe-an-to-chuc-cac-hoat-dong-ong-hanh-cung-phu-nu-bien-cuong-tai-con-cuo.html"
-                        className="hover:underline hover:text-blue-700 text-blue-500"
+                        className="underline hover:text-bold hover:text-blue-700 text-blue-500"
                     >
                         {'->'} PHỤ NỮ NGHỆ AN TỔ CHỨC CÁC HOẠT ĐỘNG &apos;ĐỒNG HÀNH CÙNG PHỤ NỮ BIÊN CƯƠNG&apos; TẠI CON
                         CUÔNG VÀ TƯƠNG DƯƠNG
                     </Link>
-                    <br />
+                    <br/>
                     <Link
                         href="https://lhpn.nghean.gov.vn/hoat-dong-hoi/hoi-phu-nu-bo-chi-huy-bo-doi-bien-phong-nghe-an-xuat-sac-gianh-giai-a-tai-hoi-thi-can-bo-hoi-co--583179"
-                        className="hover:underline hover:text-blue-700 text-blue-500"
+                        className="underline hover:text-bold hover:text-blue-700 text-blue-500"
                     >
                         {'->'} Hội phụ nữ Bộ chỉ huy Bộ đội Biên phòng Nghệ An xuất sắc giành giải A tại Hội thi “Cán bộ
                         Hội cơ sở giỏi Bộ đội Biên phòng năm 2023”
                     </Link>
-                    <br />
+                    <br/>
                     <Link
                         href="https://lhpn.nghean.gov.vn/thong-bao/phu-nu-thu-do-dong-hanh-cung-phu-nu-bien-cuong-nghe-an-495363?pageindex=0"
-                        className="hover:underline hover:text-blue-700 text-blue-500"
+                        className="underline hover:text-bold hover:text-blue-700 text-blue-500"
                     >
                         {'->'} Phụ nữ thủ đô &apos;đồng hành cùng phụ nữ biên cương&apos; Nghệ An
                     </Link>

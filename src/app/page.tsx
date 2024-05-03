@@ -1,9 +1,9 @@
 'use client';
 
-import { Button, Label, TextInput } from 'flowbite-react';
-import { useRouter } from 'next/navigation';
-import { useAtom } from 'jotai';
-import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
+import {Button, Label, TextInput} from 'flowbite-react';
+import {useRouter} from 'next/navigation';
+import {useAtom} from 'jotai';
+import {isLoggedInAtom, nameAtom, unitAtom} from '@/app/atoms';
 
 export default function Home() {
     const [name, setName] = useAtom(nameAtom);
@@ -13,7 +13,7 @@ export default function Home() {
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-        router.push('/introduction');
+        router.push('/guide');
         setIsLoggedIn(true);
     };
 
@@ -23,7 +23,7 @@ export default function Home() {
         >
             <div
                 className="absolute z-[-1] opacity-50 inset-0 bg-no-repeat bg-cover bg-center"
-                style={{ backgroundImage: 'url(\'/images/bien-phong.jpg\')' }}
+                style={{backgroundImage: 'url(\'/images/Backropnenwhite.png\')'}}
             />
             <form
                 className="flex max-w-md min-w-80 flex-col gap-4"
@@ -71,7 +71,7 @@ export default function Home() {
                     <Button
                         type="submit"
                         size="lg"
-                    >Vào Thi</Button>
+                    >Đăng nhập</Button>
                 )}
             </form>
         </div>

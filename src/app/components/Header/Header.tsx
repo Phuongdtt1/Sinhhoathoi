@@ -1,11 +1,11 @@
 'use client';
 
-import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
+import {Avatar, Button, Dropdown, Navbar} from 'flowbite-react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { useAtom } from 'jotai/index';
-import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
-import { HiLogout } from 'react-icons/hi';
+import {usePathname, useRouter} from 'next/navigation';
+import {useAtom} from 'jotai/index';
+import {isLoggedInAtom, nameAtom, unitAtom} from '@/app/atoms';
+import {HiLogout} from 'react-icons/hi';
 
 export function Header() {
     const [name, setName] = useAtom(nameAtom);
@@ -22,34 +22,35 @@ export function Header() {
     };
 
     const navLinks = [
-        { href: '/introduction', text: 'Giới thiệu' },
-        { href: '/guide', text: 'Hướng dẫn' },
-        { href: '/image', text: 'Hình ảnh' },
-        { href: '/quiz', text: 'Trắc nghiệm' },
+        {href: '/guide', text: 'Hướng dẫn'},
+        {href: '/introduction', text: 'Giới thiệu'},
+        {href: '/image', text: 'Tin tức - Sự kiện'},
+        {href: '/quiz', text: 'Trắc nghiệm'},
     ];
 
     return (
-        <header className="bg-green-100">
+        <header className="bg-blue-800">
             <div className="container relative">
                 <Navbar
                     fluid
                     rounded
-                    className="bg-green-100"
-                    color="purple"
+                    className="bg-blue-800"
+
                 >
                     <Navbar.Brand
                         as={Link}
                         href="/"
                     >
                         <Button
-                            color="purple"
                             size="sm"
-                        >
+                            className="bg-blue-800">
                             <img
                                 src="/images/logo.png"
                                 className="mr-3 h-8"
                             />
-                            <div className="text-lg sm:text-2xl self-center">SINH HOẠT HỘI</div>
+                            <div className="text-lg sm:text-2xl text-left">HỘI PHỤ NỮ <br/>BỘ ĐỘI BIÊN PHÒNG TỈNH NGHỆ
+                                AN
+                            </div>
                         </Button>
                     </Navbar.Brand>
                     {isLoggedIn && (
@@ -68,7 +69,7 @@ export function Header() {
                                     <span className="block text-lg">{name}</span>
                                     <span className="block truncate text-lg font-bold">{unit}</span>
                                 </Dropdown.Header>
-                                <Dropdown.Divider />
+                                <Dropdown.Divider/>
                                 <Dropdown.Item
                                     icon={HiLogout}
                                     onClick={handleLogout}
@@ -76,7 +77,7 @@ export function Header() {
                             </Dropdown>
                         </div>
                     )}
-                    {isLoggedIn && <Navbar.Toggle />}
+                    {isLoggedIn && <Navbar.Toggle/>}
                     {isLoggedIn && (
                         <Navbar.Collapse>
                             {navLinks.map((link, index) => (
@@ -85,7 +86,7 @@ export function Header() {
                                     as={Link}
                                     href={link.href}
                                     active={pathname == link.href}
-                                    className="md:text-xl"
+                                    className="text-white md:text-xl"
                                 >
                                     {link.text}
                                 </Navbar.Link>
