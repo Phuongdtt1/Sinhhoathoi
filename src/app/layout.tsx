@@ -42,6 +42,8 @@ export default function RootLayout({
                 <ToastContainer
                     limit={2}
                     autoClose={2000}
+                    position="top-center"
+                    theme="colored"
                 />
             </body>
         </html>

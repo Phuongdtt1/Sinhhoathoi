@@ -12,6 +12,22 @@ interface ContestProps {
     params: { index: number };
 }
 
+const getResultMessage = (percentageCorrect: number) => {
+    if (percentageCorrect < 20) {
+        return 'Bạn cần cố gắng nhiều hơn!';
+    } else if (percentageCorrect < 40) {
+        return 'Bạn đã làm khá tốt, hãy cố gắng thêm!';
+    } else if (percentageCorrect < 60) {
+        return 'Khá tốt, bạn có thể làm tốt hơn!';
+    } else if (percentageCorrect < 80) {
+        return 'Tuyệt vời! Bạn đã gần đạt mức cao nhất.';
+    } else if (percentageCorrect < 100) {
+        return 'Xuất sắc! Bạn gần như hoàn hảo!';
+    } else {
+        return 'Hoàn hảo! Tròn điểm!';
+    }
+};
+
 const Contest = ({ params }: ContestProps) => {
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({});
     const [score, setScore] = useState(0);
@@ -37,9 +53,7 @@ const Contest = ({ params }: ContestProps) => {
 
         if (unansweredQuestions.length > 0) {
             const questionList = unansweredQuestions.join(', ');
-            toast.error(`Bạn chưa trả lời câu hỏi số: ${questionList}`, {
-                position: 'top-center',
-            });
+            toast.error(`Bạn chưa trả lời câu hỏi số: ${questionList}`);
             return;
         }
 
@@ -50,9 +64,11 @@ const Contest = ({ params }: ContestProps) => {
             }
         });
         setScore(newScore);
-        toast.success(`Điểm số của bạn là: ${newScore}/${quiz.questions.length}`, {
-            position: 'top-center',
-        });
+        const totalQuestions = quiz.questions.length;
+        const percentageCorrect = (newScore / totalQuestions) * 100;
+        const resultMessage = getResultMessage(percentageCorrect);
+
+        toast.success(`${resultMessage} Điểm số: ${newScore}/${totalQuestions}`);
     };
 
     return (
