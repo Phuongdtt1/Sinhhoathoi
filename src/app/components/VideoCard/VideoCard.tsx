@@ -34,6 +34,7 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
                             src={url}
                             className="w-full max-h-[calc(100vh-0.5rem)] aspect-video"
                             allow="autoplay"
+                            allowFullScreen
                         ></iframe>
                         <button
                             onClick={() => setShowVideo(false)}
