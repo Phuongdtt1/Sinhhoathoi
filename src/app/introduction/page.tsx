@@ -73,15 +73,16 @@ export default function Introduction() {
                     </div>
                 </div>
             </div>
-            <Link
-                href="/quiz"
-                className="mb-4"
-            >
-                <img
-                    className="rounded-2xl bg-red-500 text-white w-full text-center"
-                    src="/images/background.jpg"
-                />
-            </Link>
+            <div className="mb-4">
+                <Link
+                    href="/quiz"
+                >
+                    <img
+                        className="rounded-2xl bg-red-500 text-white"
+                        src="/images/background.jpg"
+                    />
+                </Link>
+            </div>
         </div>
     );
 }
