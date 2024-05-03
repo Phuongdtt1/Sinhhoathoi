@@ -105,7 +105,7 @@ const Contest = ({ params }: ContestProps) => {
                     ))}
                 </div>
             ))}
-            <div className="grid grid-cols-1 sm:grid-cols-2 bg-red-200 p-8 mt-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 bg-red-200 p-4 mt-4 gap-4">
                 <div>
                     <div className="text-2xl mb-4">
                         <span className="font-bold">Họ và tên: {' '}</span>
@@ -116,19 +116,21 @@ const Contest = ({ params }: ContestProps) => {
                         {unit}
                     </div>
                 </div>
-                <div className="flex flex-row justify-evenly items-stretch">
-                    <Button
-                        type="submit"
-                        size="lg"
-                    >Nộp Bài</Button>
-                    <input
-                        type="text"
-                        id="disabled-input"
-                        aria-label="disabled input"
-                        className="rounded-lg block cursor-not-allowed text-center w-28"
-                        value={`Điểm: ${score}/${quiz.questions.length}`}
-                        disabled
-                    />
+                <div className="flex flex-col justify-center">
+                    <div className="flex flex-row justify-evenly items-stretch">
+                        <Button
+                            type="submit"
+                            size="lg"
+                        >Nộp Bài</Button>
+                        <input
+                            type="text"
+                            id="disabled-input"
+                            aria-label="disabled input"
+                            className="rounded-lg block cursor-not-allowed text-center w-28"
+                            value={`Điểm: ${score}/${quiz.questions.length}`}
+                            disabled
+                        />
+                    </div>
                 </div>
             </div>
         </form>
