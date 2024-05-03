@@ -1,11 +1,11 @@
 'use client';
 
-import {Avatar, Button, Dropdown, Navbar} from 'flowbite-react';
+import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
 import Link from 'next/link';
-import {usePathname, useRouter} from 'next/navigation';
-import {useAtom} from 'jotai/index';
-import {isLoggedInAtom, nameAtom, unitAtom} from '@/app/atoms';
-import {HiLogout} from 'react-icons/hi';
+import { usePathname, useRouter } from 'next/navigation';
+import { useAtom } from 'jotai/index';
+import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
+import { HiLogout } from 'react-icons/hi';
 
 export function Header() {
     const [name, setName] = useAtom(nameAtom);
@@ -22,10 +22,10 @@ export function Header() {
     };
 
     const navLinks = [
-        {href: '/guide', text: 'Hướng dẫn'},
-        {href: '/introduction', text: 'Giới thiệu'},
-        {href: '/image', text: 'Tin tức - Sự kiện'},
-        {href: '/quiz', text: 'Trắc nghiệm'},
+        { href: '/guide', text: 'Hướng dẫn' },
+        { href: '/introduction', text: 'Giới thiệu' },
+        { href: '/image', text: 'Tin tức - Sự kiện' },
+        { href: '/quiz', text: 'Trắc nghiệm' },
     ];
 
     return (
@@ -35,21 +35,26 @@ export function Header() {
                     fluid
                     rounded
                     className="bg-blue-800"
-
                 >
                     <Navbar.Brand
                         as={Link}
                         href="/"
+                        className="shrink"
                     >
                         <Button
                             size="sm"
-                            className="bg-blue-800">
+                            className="bg-blue-800"
+                        >
                             <img
                                 src="/images/logo.png"
-                                className="mr-3 h-8"
+                                className="mr-3 h-12 sm:h-16"
                             />
-                            <div className="text-lg sm:text-2xl text-left">HỘI PHỤ NỮ <br/>BỘ ĐỘI BIÊN PHÒNG TỈNH NGHỆ
-                                AN
+                            <div className="text-sm sm:text-2xl text-left">
+                                HỘI PHỤ NỮ
+                                <br />
+                                BỘ ĐỘI BIÊN PHÒNG {' '}
+                                <br className="sm:hidden" />
+                                TỈNH NGHỆ AN
                             </div>
                         </Button>
                     </Navbar.Brand>
@@ -69,7 +74,7 @@ export function Header() {
                                     <span className="block text-lg">{name}</span>
                                     <span className="block truncate text-lg font-bold">{unit}</span>
                                 </Dropdown.Header>
-                                <Dropdown.Divider/>
+                                <Dropdown.Divider />
                                 <Dropdown.Item
                                     icon={HiLogout}
                                     onClick={handleLogout}
@@ -77,7 +82,7 @@ export function Header() {
                             </Dropdown>
                         </div>
                     )}
-                    {isLoggedIn && <Navbar.Toggle/>}
+                    {isLoggedIn && <Navbar.Toggle />}
                     {isLoggedIn && (
                         <Navbar.Collapse>
                             {navLinks.map((link, index) => (

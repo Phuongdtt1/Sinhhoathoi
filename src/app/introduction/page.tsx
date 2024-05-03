@@ -34,7 +34,7 @@ const sections: SectionProps[] = [
 ];
 
 // Component
-function Section({title, content}: SectionProps) {
+function Section({ title, content }: SectionProps) {
     return (
         <div className="p-4 bg-amber-100 text-blue-800 font-normal text-justify m-4">
             <p className="text-bold text-white text-center bg-green-800 p-4 mb-4">{title}</p>
@@ -60,7 +60,6 @@ function Introduction() {
                     />
                 ))}
             </div>
-
         </div>
     );
 }

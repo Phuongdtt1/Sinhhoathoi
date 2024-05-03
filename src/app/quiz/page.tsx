@@ -1,18 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import {quizs} from '@/app/resources/QuizData';
-import {useAtom} from 'jotai/index';
-import {nameAtom, unitAtom} from '@/app/atoms';
-import {LoginRequired} from '@/app/components/LoginRequired/LoginRequired';
-
+import { quizs } from '@/app/resources/QuizData';
+import { useAtom } from 'jotai/index';
+import { nameAtom, unitAtom } from '@/app/atoms';
+import { LoginRequired } from '@/app/components/LoginRequired/LoginRequired';
 
 const Quiz = () => {
     const [name] = useAtom(nameAtom);
     const [unit] = useAtom(unitAtom);
 
     if (!name || !unit) return (
-        <LoginRequired/>
+        <LoginRequired />
     );
 
     return (
