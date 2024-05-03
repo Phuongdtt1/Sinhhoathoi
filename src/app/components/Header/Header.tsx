@@ -1,12 +1,26 @@
 'use client';
 
-import { Button, Navbar } from 'flowbite-react';
+import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useAtom } from 'jotai/index';
+import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
 
 
 export function Header() {
+    const [name, setName] = useAtom(nameAtom);
+    const [unit, setUnit] = useAtom(unitAtom);
+    const [isLoggedIn, setIsLoggedIn] = useAtom(isLoggedInAtom);
     const pathname = usePathname();
+    const router = useRouter();
+
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        setName(null);
+        setUnit(null);
+        router.push('/');
+    };
+
     return (
         <header
             className="bg-green-100"
@@ -24,14 +38,37 @@ export function Header() {
                     >
                         <Button
                             color="purple"
+                            size="sm"
                         >
                             <img
                                 src="/images/logo.png"
-                                className="mr-3 h-9"
+                                className="mr-3 h-8"
                             />
-                            <div className="text-xl self-center">SINH HOẠT HỘI</div>
+                            <div className="text-lg sm:text-2xl self-center">SINH HOẠT HỘI</div>
                         </Button>
                     </Navbar.Brand>
+                    {isLoggedIn &&
+                        <div className="flex md:order-2">
+                            <Dropdown
+                                arrowIcon={false}
+                                inline
+                                label={
+                                    <Avatar
+                                        alt="User settings"
+                                        img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                                        rounded
+                                    />
+                                }
+                            >
+                                <Dropdown.Header>
+                                    <span className="block">{name}</span>
+                                    <span className="block truncate font-bold">{unit}</span>
+                                </Dropdown.Header>
+                                <Dropdown.Divider />
+                                <Dropdown.Item onClick={handleLogout}>Đăng xuất</Dropdown.Item>
+                            </Dropdown>
+                        </div>
+                    }
                     <Navbar.Toggle />
                     <Navbar.Collapse>
                         <Navbar.Link
@@ -75,7 +112,8 @@ export function Header() {
                             Trắc nghiệm
                         </Navbar.Link>
                     </Navbar.Collapse>
-                </Navbar></div>
+                </Navbar>
+            </div>
         </header>
     );
 }
