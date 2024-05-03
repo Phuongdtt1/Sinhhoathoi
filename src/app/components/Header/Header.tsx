@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAtom } from 'jotai/index';
 import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
+import { HiLogout } from 'react-icons/hi';
 
 export function Header() {
     const [name, setName] = useAtom(nameAtom);
@@ -58,16 +59,20 @@ export function Header() {
                                 inline
                                 label={<Avatar
                                     alt="User settings"
-                                    img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                                    img="https://accgroup.vn/wp-content/uploads/2022/12/logo-bo-doi-bien-phong-viet-nam.webp"
                                     rounded
                                 />}
+                                placement="bottom-end"
                             >
                                 <Dropdown.Header>
-                                    <span className="block">{name}</span>
-                                    <span className="block truncate font-bold">{unit}</span>
+                                    <span className="block text-lg">{name}</span>
+                                    <span className="block truncate text-lg font-bold">{unit}</span>
                                 </Dropdown.Header>
                                 <Dropdown.Divider />
-                                <Dropdown.Item onClick={handleLogout}>Đăng xuất</Dropdown.Item>
+                                <Dropdown.Item
+                                    icon={HiLogout}
+                                    onClick={handleLogout}
+                                >Đăng xuất</Dropdown.Item>
                             </Dropdown>
                         </div>
                     )}
