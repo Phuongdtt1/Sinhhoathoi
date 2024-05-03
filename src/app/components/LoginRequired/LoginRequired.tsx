@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function LoginRequired() {
     return (
-        <div className="container h-36 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-4xl text-center text-red-500 ">
                 Vui lòng đăng nhập tại {''}
                 <Link href="/">

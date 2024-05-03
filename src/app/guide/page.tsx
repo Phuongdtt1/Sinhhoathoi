@@ -3,16 +3,12 @@ import Link from 'next/link';
 export default function Guide() {
     return (
         <div className="container">
+            <div
+                className="text-purple-500 text-4xl font-bold m-4"
+            >
+                Hướng dẫn thi trắc nghiệm
+            </div>
             <div className="grid md:grid-cols-5 grid-cols-1 gap-8 mb-8">
-                <Link
-                    href="/guide"
-                >
-                    <p
-                        className="rounded-2xl bg-purple-500 text-white p-4 text-center"
-                    >
-                        Hướng dẫn thi trắc nghiệm
-                    </p>
-                </Link>
                 <img
                     src="https://res.cloudinary.com/ezcode97/image/upload/v1714494660/sinh_hoat_hoi/huong_dan/1.jpg"
                     title="nhấn 3 gạch/họ tên/đơn vị/vào thi"

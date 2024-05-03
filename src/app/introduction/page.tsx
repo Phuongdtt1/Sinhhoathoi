@@ -6,13 +6,13 @@ export default function Introduction() {
     return (
         <div className="container">
             <div
-                className="text-red-500 text-4xl font-bold w-52 text-center mx-4 mt-4"
+                className="text-red-500 text-4xl font-bold mx-4 mt-4"
             >
                 GIỚI THIỆU
             </div>
             <div className="grid md:grid-cols-2 grid-cols-1">
                 <div className="p-4 bg-amber-100 text-blue-800 font-normal text-justify m-4">
-                    <p className="text-bold text-white text-center bg-green-800 p-4">
+                    <p className="text-bold text-white text-center bg-green-800 p-4 mb-4">
                         * HỆ THỐNG TỔ CHỨC VÀ TƯ CÁCH PHÁP NHÂN CỦA CÁC CẤP HỘI
                     </p>
                     <div className="indent-4 sm:indent-8">
@@ -39,7 +39,7 @@ export default function Introduction() {
                     </div>
                 </div>
                 <div className="p-4 bg-amber-100 text-blue-800 font-normal text-justify m-4">
-                    <p className="text-bold text-white text-center bg-green-800 p-4">
+                    <p className="text-bold text-white text-center bg-green-800 p-4 mb-4">
                         * CƠ QUAN LÃNH ĐẠO VÀ CƠ QUAN CHUYÊN TRÁCH CÁC CẤP HỘI
                     </p>
                     <div className="indent-4 sm:indent-8">
@@ -74,7 +74,8 @@ export default function Introduction() {
                 </div>
             </div>
             <Link
-                href="/login"
+                href="/quiz"
+                className="mb-4"
             >
                 <img
                     className="rounded-2xl bg-red-500 text-white w-full text-center"

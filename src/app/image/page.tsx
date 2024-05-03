@@ -214,6 +214,7 @@ const Image = () => {
     return (
         <div className="container">
             <ImageCarousel urls={womenImageUrls} />
+            <div className="text-2xl font-bold my-4">VIDEO HỌẠT ĐỘNG</div>
             <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                 {videos.map((video, idx) => (
                     <VideoCard
@@ -224,15 +225,18 @@ const Image = () => {
                     />
                 ))}
             </div>
+            <div className="text-2xl font-bold my-4">HÌNH ẢNH HỘI THI</div>
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
-                        className="text-2xl my-4 text-fuchsia-800 cursor-pointer hover:underline hover:text-fuchsia-950 inline-block"
+                        className="text-2xl my-4 text-fuchsia-800 cursor-pointer hover:underline hover:text-fuchsia-950"
                         onClick={() => toggleGroup(group.title)}
                     >
-                        <div className="flex flex-row items-center gap-2">
-                            {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                            <div>{group.title}</div>
+                        <div className="flex flex-row items-start gap-2">
+                            <div>
+                                {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                            </div>
+                            <div className={isExpanded(group.title) ? '' : 'truncate'}>{group.title}</div>
                         </div>
                     </div>
                     {expandedGroups.includes(group.title) && (
@@ -269,7 +273,7 @@ const Image = () => {
                 </div>
             )}
             <div className="border-blue-900">
-                <h1 className="text-2xl font-bold my-4">TIN TỨC-SỰ KIỆN</h1>
+                <div className="text-2xl font-bold mt-4">TIN TỨC-SỰ KIỆN</div>
                 <p className="my-4">
                     <Link
                         href="https://www.bienphong.com.vn/sang-dep-hinh-anh-nu-quan-nhan-bdbp-post473259.html"
