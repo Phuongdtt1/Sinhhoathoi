@@ -3,16 +3,18 @@
 import { Button, Label, TextInput } from 'flowbite-react';
 import { useRouter } from 'next/navigation';
 import { useAtom } from 'jotai';
-import { nameAtom, unitAtom } from '@/app/atoms';
+import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
 
 export default function Home() {
     const [name, setName] = useAtom(nameAtom);
     const [unit, setUnit] = useAtom(unitAtom);
+    const [isLoggedIn, setIsLoggedIn] = useAtom(isLoggedInAtom);
     const router = useRouter();
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         router.push('/introduction');
+        setIsLoggedIn(true);
     };
 
     return (
@@ -35,6 +37,7 @@ export default function Home() {
                         placeholder="Ví dụ: Nguyễn Văn A"
                         sizing="lg"
                         required
+                        disabled={isLoggedIn}
                         value={name ?? ''}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -53,14 +56,17 @@ export default function Home() {
                         placeholder="Ví dụ: Bộ đội biên phòng tỉnh Nghệ An"
                         sizing="lg"
                         required
+                        disabled={isLoggedIn}
                         value={unit ?? ''}
                         onChange={(e) => setUnit(e.target.value)}
                     />
                 </div>
-                <Button
-                    type="submit"
-                    size="lg"
-                >Vào Thi</Button>
+                {!isLoggedIn && (
+                    <Button
+                        type="submit"
+                        size="lg"
+                    >Vào Thi</Button>
+                )}
             </form>
         </div>
     );
