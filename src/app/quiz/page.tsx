@@ -1,26 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { quizs } from '@/app/resources/QuizData';
+import { useAtom } from 'jotai/index';
+import { nameAtom, unitAtom } from '@/app/atoms';
+import { LoginRequired } from '@/app/components/LoginRequired/LoginRequired';
 
 
 const Quiz = () => {
-    const searchParams = useSearchParams();
-
-    const name = searchParams.get('name');
-    const unit = searchParams.get('unit');
+    const [name] = useAtom(nameAtom);
+    const [unit] = useAtom(unitAtom);
     const colors = ['bg-red-500', 'bg-blue-500', 'bg-yellow-500', 'bg-green-500', 'bg-purple-500', 'bg-orange-500', 'bg-teal-500'];
 
     if (!name || !unit) return (
-        <div className="container h-36 flex items-center justify-center">
-            <p className="text-4xl text-center text-red-500 ">
-                Vui lòng đăng nhập tại {''}
-                <Link href="/login">
-                    <span className="inline-block text-white p-4 rounded-2xl bg-blue-500">Đây</span>
-                </Link>
-            </p>
-        </div>
+        <LoginRequired />
     );
 
     return (
@@ -29,7 +22,7 @@ const Quiz = () => {
                 quizs.map((quiz, index) => (
                     <Link
                         key={index}
-                        href={`/quiz/${index}?name=${name}&unit=${unit}`}
+                        href={`/quiz/${index}`}
                     >
                         <div
                             className={`rounded-2xl ${colors[index % colors.length]} text-white p-4 my-2`}
