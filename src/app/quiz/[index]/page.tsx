@@ -73,7 +73,7 @@ const Contest = ({ params }: ContestProps) => {
     return (
         <form
             name="quiz"
-            className="container my-4"
+            className="container my-4 text-justify"
             onSubmit={handleSubmit}
         >
             <h1 className="text-center bg-red-400 font-bold text-2xl p-4">

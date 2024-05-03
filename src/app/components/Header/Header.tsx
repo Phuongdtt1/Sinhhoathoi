@@ -25,7 +25,7 @@ export function Header() {
         <header
             className="bg-green-100"
         >
-            <div className="container">
+            <div className="container relative">
                 <Navbar
                     fluid
                     rounded
