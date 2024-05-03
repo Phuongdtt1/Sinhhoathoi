@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 export interface VideoCardProps {
     title: string;
@@ -6,10 +6,11 @@ export interface VideoCardProps {
     url: string;
 }
 
-export function VideoCard({ title, content, url }: VideoCardProps) {
+export function VideoCard({title, content, url}: VideoCardProps) {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
+
         <div
             className="flex flex-col gap-2 p-6 shadow-md shadow-green-200 rounded-xl border-2"
         >
@@ -41,6 +42,9 @@ export function VideoCard({ title, content, url }: VideoCardProps) {
                     </div>
                 </div>
             )}
+
+
         </div>
-    );
+    )
+        ;
 }

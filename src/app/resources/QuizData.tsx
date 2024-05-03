@@ -11,222 +11,6 @@ interface QuizData {
 
 export const quizs: QuizData[] = [
     {
-        'quizTitle': 'Cuộc thi tim hiểu Điều lệ Hội liên hiệp phụ nữ Việt nam khóa XVIII',
-        'questions': [
-            {
-                'question': 'Theo Điều lệ Hội liên hiệp phụ nữ Việt Nam hiện hành thì Hội Liên hiệp Phụ nữ Việt Nam?',
-                'answers': [
-                    {
-                        'text': 'là tổ chức chính trị – xã hội trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'là tổ chức chính trị trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'là tổ chức xã hội trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'là tổ chức chính trị – xã hội nghề nghiệp trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
-                        'correct': true,
-                    },
-                ],
-            },
-            {
-                'question': 'Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp Phụ nữ Việt Nam là tổ chức gì?',
-                'answers': [
-                    {
-                        'text': 'Chính trị',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Chính trị – xã hội',
-                        'correct': true,
-                    },
-                    {
-                        'text': 'Xã hội nghề nghiệp',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Xã hội',
-                        'correct': false,
-                    },
-                ],
-            },
-            {
-                'question': 'Đại hội đại biểu Phụ nữ toàn quốc lần thứ XIII dự kiến đến cuối nhiệm kỳ, Trung ương Hội sẽ đề xuất thành công ít nhất bao nhiêu chính sách, đề án và bao nhiêu chương trình?',
-                'answers': [
-                    {
-                        'text': 'Ít nhất 05 chính sách, đề án và 02 chương trình.',
-                        'correct': true,
-                    },
-                    {
-                        'text': 'Ít nhất 04 chính sách, đề án và 03 chương trình.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Ít nhất 03 chính sách, đề án và 02 chương trình.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Ít nhất 02 chính sách, đề án và 05 chương trình.',
-                        'correct': false,
-                    },
-                ],
-            },
-            {
-                'question': 'Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Nhiệm kỳ của Ban Chấp hành, Ban Thường vụ, Chủ tịch và Phó Chủ tịch được chỉ định:',
-                'answers': [
-                    {
-                        'text': 'Phải đảm bảo đủ năm năm.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Không nhất thiết đủ năm năm.',
-                        'correct': true,
-                    },
-                    {
-                        'text': 'Không nhất thiết đủ năm năm, nhưng phải đảm bảo trên 36 tháng.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Không nhất thiết đủ năm năm, nhưng phải đảm bảo ít nhất 36 tháng.',
-                        'correct': false,
-                    },
-                ],
-            },
-            {
-                'question': 'Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Chi hội, tổ phụ nữ sinh hoạt:',
-                'answers': [
-                    {
-                        'text': 'Ít nhất ba tháng một lần.',
-                        'correct': true,
-                    },
-                    {
-                        'text': 'Ba tháng một lần.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Sáu tháng một lần.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Ít nhất Sáu tháng một lần.',
-                        'correct': false,
-                    },
-                ],
-            },
-            {
-                'question': 'Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp Phụ nữ Việt Nam có chức năng nào dưới đây?',
-                'answers': [
-                    {
-                        'text': 'Đại diện chăm lo, bảo vệ quyền, lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ tham gia xây dựng Đảng, tham gia quản lý Nhà nước.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Đoàn kết, vận động phụ nữ thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước; vận động xã hội thực hiện bình đẳng giới.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Cả phương án A và B đều đúng',
-                        'correct': true,
-                    },
-                    {
-                        'text': 'Cả phương án A và B đều sai',
-                        'correct': false,
-                    },
-                ],
-            },
-            {
-                'question': 'Theo quy định Điều lệ và Hướng dẫn thực hiện Điều lệ Hội hiện hành, các đối tượng nào dưới đây là hội viên đương nhiên của Hội Liên hiệp Phụ nữ Việt Nam?',
-                'answers': [
-                    {
-                        'text': 'Nữ cán bộ, công chức, viên chức, công nhân lao động trong tổ chức công đoàn',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Phụ nữ trong lực lượng vũ trang',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Phụ nữ trong các tổ chức thành viên của Hội',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Cả 3 đáp án trên',
-                        'correct': true,
-                    },
-                ],
-            },
-            {
-                'question': 'Ngày 30/06/2017 Thủ tướng Chính phủ phê duyệt đề án nào do TW Hội LHPN Việt Nam đề xuất.',
-                'answers': [
-                    {
-                        'text': 'Đề án “Tuyên truyền, giáo dục, vận động, hỗ trợ phụ nữ tham gia giải quyết 1 số vấn đề xã hội liên quan đến phụ nữ giai đoạn 2017-2027”',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Đề án “Hỗ trợ phụ nữ khởi nghiệp giai đoạn 2017-2025”',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Đề án “Hỗ trợ phụ nữ phát triển sinh kế bền vững giai đoạn 2017-2025',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Phương án a và b',
-                        'correct': true,
-                    },
-                ],
-            },
-            {
-                'question': 'Chương trình Đồng hành cùng phụ nữ biên cương được BCH Trung ương Hội LHPN Việt Nam quyết định là?',
-                'answers': [
-                    {
-                        'text': 'Một dự án đặc biệt được thực hiện từ năm 2018 – 2020.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Đề án được thực hiện từ năm 2018 – 2020.',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Đợt thi đua đặc biệt được thực hiện từ năm 2018 – 2020.',
-                        'correct': true,
-                    },
-                    {
-                        'text': 'Đề tài được thực hiện từ năm 2018 – 2020.',
-                        'correct': false,
-                    },
-                ],
-            },
-            {
-                'question': 'Hội LHPN Việt Nam trong giai đoạn hiện nay có những nhiệm vụ gì?',
-                'answers': [
-                    {
-                        'text': 'Tuyên truyền, giáo dục phụ nữ về chính trị, tư tưởng, lý tưởng cách mạng, phẩm chất đạo đức,lối sống; thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước, tham gia xây dựng Đảng, Nhà nước, phát triển kinh tế - xã hội và bảo vệ Tổ quốc; và vận động, hỗ trợ phụ nữ nâng cao năng lực, trình độ, cải thiện đời sống vật chất, tinh thần và xây dựng gia đình hạnh phúc;',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Tham mưu đề xuất, tham gia xây dựng, phản biện xã hội và giám sát việc thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước có liên quan đến quyền, lợi ích hợp pháp, chính đáng của phụ nữ, gia đình, trẻ em và bình đẳng giới;',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Xây dựng, phát triển tổ chức Hội vững mạnh và Đoàn kết, hợp tác với phụ nữ các nước, các tổ chức, cá nhân tiến bộ trên thế giới vì bình đẳng, phát triển và hòa bình',
-                        'correct': false,
-                    },
-                    {
-                        'text': 'Tất cả các phương án trên.',
-                        'correct': true,
-                    },
-                ],
-            },
-
-        ],
-    },
-    {
         'quizTitle': 'Cuộc thi tim hiểu Tăng cường bảo đảm an toàn thông tin mạng',
         'questions': [
             {
@@ -442,4 +226,223 @@ export const quizs: QuizData[] = [
 
         ],
     },
-];
+
+
+    {
+        'quizTitle': 'Cuộc thi tim hiểu Điều lệ Hội liên hiệp phụ nữ Việt nam khóa XVIII',
+        'questions': [
+            {
+                'question': 'Theo Điều lệ Hội liên hiệp phụ nữ Việt Nam hiện hành thì Hội Liên hiệp Phụ nữ Việt Nam?',
+                'answers': [
+                    {
+                        'text': 'là tổ chức chính trị – xã hội trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'là tổ chức chính trị trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'là tổ chức xã hội trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'là tổ chức chính trị – xã hội nghề nghiệp trong hệ thống chính trị, đại diện cho quyền và lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ Việt Nam; phấn đấu vì sự phát triển của phụ nữ và bình đẳng giới',
+                        'correct': true,
+                    },
+                ],
+            },
+            {
+                'question': 'Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp Phụ nữ Việt Nam là tổ chức gì?',
+                'answers': [
+                    {
+                        'text': 'Chính trị',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Chính trị – xã hội',
+                        'correct': true,
+                    },
+                    {
+                        'text': 'Xã hội nghề nghiệp',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Xã hội',
+                        'correct': false,
+                    },
+                ],
+            },
+            {
+                'question': 'Đại hội đại biểu Phụ nữ toàn quốc lần thứ XIII dự kiến đến cuối nhiệm kỳ, Trung ương Hội sẽ đề xuất thành công ít nhất bao nhiêu chính sách, đề án và bao nhiêu chương trình?',
+                'answers': [
+                    {
+                        'text': 'Ít nhất 05 chính sách, đề án và 02 chương trình.',
+                        'correct': true,
+                    },
+                    {
+                        'text': 'Ít nhất 04 chính sách, đề án và 03 chương trình.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Ít nhất 03 chính sách, đề án và 02 chương trình.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Ít nhất 02 chính sách, đề án và 05 chương trình.',
+                        'correct': false,
+                    },
+                ],
+            },
+            {
+                'question': 'Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Nhiệm kỳ của Ban Chấp hành, Ban Thường vụ, Chủ tịch và Phó Chủ tịch được chỉ định:',
+                'answers': [
+                    {
+                        'text': 'Phải đảm bảo đủ năm năm.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Không nhất thiết đủ năm năm.',
+                        'correct': true,
+                    },
+                    {
+                        'text': 'Không nhất thiết đủ năm năm, nhưng phải đảm bảo trên 36 tháng.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Không nhất thiết đủ năm năm, nhưng phải đảm bảo ít nhất 36 tháng.',
+                        'correct': false,
+                    },
+                ],
+            },
+            {
+                'question': 'Theo Điều lệ Hội LHPN Việt Nam khoá XIII sửa đổi 2022, Chi hội, tổ phụ nữ sinh hoạt:',
+                'answers': [
+                    {
+                        'text': 'Ít nhất ba tháng một lần.',
+                        'correct': true,
+                    },
+                    {
+                        'text': 'Ba tháng một lần.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Sáu tháng một lần.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Ít nhất Sáu tháng một lần.',
+                        'correct': false,
+                    },
+                ],
+            },
+            {
+                'question': 'Theo Điều lệ Hội liên hiệp Phụ nữ Việt Nam thì Hội liên hiệp Phụ nữ Việt Nam có chức năng nào dưới đây?',
+                'answers': [
+                    {
+                        'text': 'Đại diện chăm lo, bảo vệ quyền, lợi ích hợp pháp, chính đáng của các tầng lớp phụ nữ tham gia xây dựng Đảng, tham gia quản lý Nhà nước.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Đoàn kết, vận động phụ nữ thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước; vận động xã hội thực hiện bình đẳng giới.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Cả phương án A và B đều đúng',
+                        'correct': true,
+                    },
+                    {
+                        'text': 'Cả phương án A và B đều sai',
+                        'correct': false,
+                    },
+                ],
+            },
+            {
+                'question': 'Theo quy định Điều lệ và Hướng dẫn thực hiện Điều lệ Hội hiện hành, các đối tượng nào dưới đây là hội viên đương nhiên của Hội Liên hiệp Phụ nữ Việt Nam?',
+                'answers': [
+                    {
+                        'text': 'Nữ cán bộ, công chức, viên chức, công nhân lao động trong tổ chức công đoàn',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Phụ nữ trong lực lượng vũ trang',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Phụ nữ trong các tổ chức thành viên của Hội',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Cả 3 đáp án trên',
+                        'correct': true,
+                    },
+                ],
+            },
+            {
+                'question': 'Ngày 30/06/2017 Thủ tướng Chính phủ phê duyệt đề án nào do TW Hội LHPN Việt Nam đề xuất.',
+                'answers': [
+                    {
+                        'text': 'Đề án “Tuyên truyền, giáo dục, vận động, hỗ trợ phụ nữ tham gia giải quyết 1 số vấn đề xã hội liên quan đến phụ nữ giai đoạn 2017-2027”',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Đề án “Hỗ trợ phụ nữ khởi nghiệp giai đoạn 2017-2025”',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Đề án “Hỗ trợ phụ nữ phát triển sinh kế bền vững giai đoạn 2017-2025',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Phương án a và b',
+                        'correct': true,
+                    },
+                ],
+            },
+            {
+                'question': 'Chương trình Đồng hành cùng phụ nữ biên cương được BCH Trung ương Hội LHPN Việt Nam quyết định là?',
+                'answers': [
+                    {
+                        'text': 'Một dự án đặc biệt được thực hiện từ năm 2018 – 2020.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Đề án được thực hiện từ năm 2018 – 2020.',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Đợt thi đua đặc biệt được thực hiện từ năm 2018 – 2020.',
+                        'correct': true,
+                    },
+                    {
+                        'text': 'Đề tài được thực hiện từ năm 2018 – 2020.',
+                        'correct': false,
+                    },
+                ],
+            },
+            {
+                'question': 'Hội LHPN Việt Nam trong giai đoạn hiện nay có những nhiệm vụ gì?',
+                'answers': [
+                    {
+                        'text': 'Tuyên truyền, giáo dục phụ nữ về chính trị, tư tưởng, lý tưởng cách mạng, phẩm chất đạo đức,lối sống; thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước, tham gia xây dựng Đảng, Nhà nước, phát triển kinh tế - xã hội và bảo vệ Tổ quốc; và vận động, hỗ trợ phụ nữ nâng cao năng lực, trình độ, cải thiện đời sống vật chất, tinh thần và xây dựng gia đình hạnh phúc;',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Tham mưu đề xuất, tham gia xây dựng, phản biện xã hội và giám sát việc thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước có liên quan đến quyền, lợi ích hợp pháp, chính đáng của phụ nữ, gia đình, trẻ em và bình đẳng giới;',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Xây dựng, phát triển tổ chức Hội vững mạnh và Đoàn kết, hợp tác với phụ nữ các nước, các tổ chức, cá nhân tiến bộ trên thế giới vì bình đẳng, phát triển và hòa bình',
+                        'correct': false,
+                    },
+                    {
+                        'text': 'Tất cả các phương án trên.',
+                        'correct': true,
+                    },
+                ],
+            },
+
+        ],
+    },
+
+]

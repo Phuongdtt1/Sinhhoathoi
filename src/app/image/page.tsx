@@ -1,7 +1,7 @@
 'use client';
-import React, { useState } from 'react';
-import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import React, {useState} from 'react';
+import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 
 interface GroupImage {
     title: string,
@@ -43,7 +43,7 @@ const groupImages: GroupImage[] = [
         ],
     },
     {
-        title: 'Chiều 28/7/2022, Hội phụ nữ BĐBP Nghệ An tổ chức chương trình "Bát nước thao trường" và "Bữa cơm dinh dưỡng" phục vụ cán bộ, chiến sĩ đang thực hiện nhiệm vụ phục vụ diễn tập năm 2022',
+        title: 'Hội phụ nữ BĐBP Nghệ An tổ chức chương trình "Bát nước thao trường" và "Bữa cơm dinh dưỡng" phục vụ cán bộ, chiến sĩ đang thực hiện nhiệm vụ phục vụ diễn tập năm 2022',
         images: [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc1.jpg',
@@ -96,24 +96,10 @@ const groupImages: GroupImage[] = [
         ],
     },
     {
-        title: 'Còn lại', images: [
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-1.jpg',
-            },
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-2.jpg',
-            },
+        title: 'Trao tặng bò giống cho người nghèo Đan Lai', images: [
+
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-3.jpg',
-            },
-
-        ],
-    },
-    {
-        title: 'Còn lại 2',
-        images: [
-            {
-                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-1.jpg',
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-2.jpg',
@@ -121,6 +107,17 @@ const groupImages: GroupImage[] = [
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-3.jpg',
             },
+        ],
+    },
+    {
+        title: 'Chương trình đồng hành cùng phụ nữ biên cương',
+        images: [
+
+
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-1.jpg',
+            },
+
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-4.jpg',
             },
@@ -136,6 +133,7 @@ const groupImages: GroupImage[] = [
     {
         title: 'Nguồn Facebook',
         images: [
+
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb1.jpg',
             },
@@ -159,6 +157,9 @@ const groupImages: GroupImage[] = [
             },
             {
                 url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb8.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-2.jpg',
             },
         ],
     },
@@ -192,7 +193,7 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls} />
+            <ImageCarousel urls={womenImageUrls}/>
             {groupImages.map((group, index) => (
                 <div key={index}>
                     <div
@@ -200,7 +201,7 @@ const Image = () => {
                         onClick={() => toggleGroup(group.title)}
                     >
                         <div className="flex flex-row items-center gap-2">
-                            {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                            {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
                             <div>{group.title}</div>
                         </div>
                     </div>
@@ -214,7 +215,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{ backgroundImage: `url(${image.url})` }}
+                                        style={{backgroundImage: `url(${image.url})`}}
                                     />
                                 </div>
                             ))}
