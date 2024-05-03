@@ -282,8 +282,8 @@ const Image = () => {
                         href="https://mattrannghean.org.vn/cms/portal/read/cac-phong-trao-thi-dua-khac/news/phu-nu-nghe-an-to-chuc-cac-hoat-dong-ong-hanh-cung-phu-nu-bien-cuong-tai-con-cuo.html"
                         className="hover:underline hover:text-blue-700 text-blue-500"
                     >
-                        {'->'} PHỤ NỮ NGHỆ AN TỔ CHỨC CÁC HOẠT ĐỘNG 'ĐỒNG HÀNH CÙNG PHỤ NỮ BIÊN CƯƠNG' TẠI CON CUÔNG VÀ
-                        TƯƠNG DƯƠNG
+                        {'->'} PHỤ NỮ NGHỆ AN TỔ CHỨC CÁC HOẠT ĐỘNG &apos;ĐỒNG HÀNH CÙNG PHỤ NỮ BIÊN CƯƠNG&apos; TẠI CON
+                        CUÔNG VÀ TƯƠNG DƯƠNG
                     </Link>
                     <br />
                     <Link
@@ -298,7 +298,7 @@ const Image = () => {
                         href="https://lhpn.nghean.gov.vn/thong-bao/phu-nu-thu-do-dong-hanh-cung-phu-nu-bien-cuong-nghe-an-495363?pageindex=0"
                         className="hover:underline hover:text-blue-700 text-blue-500"
                     >
-                        {'->'} Phụ nữ thủ đô 'đồng hành cùng phụ nữ biên cương' Nghệ An
+                        {'->'} Phụ nữ thủ đô &apos;đồng hành cùng phụ nữ biên cương&apos; Nghệ An
                     </Link>
                 </p>
             </div>
