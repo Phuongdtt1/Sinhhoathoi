@@ -38,9 +38,7 @@ export default function Guide() {
                         className="hover:underline hover:text-blue-700 text-blue-500"
                     >
                         {'->'} Công điện của Thủ tướng Chính phủ số 33/CĐ-TTg về tăng cường bảo đảm an toàn
-                        thông
-                        tin
-                        mạng
+                        thông tin mạng
                     </Link>
                     <br />
                     <Link
@@ -48,8 +46,7 @@ export default function Guide() {
                         className="hover:underline hover:text-blue-700 text-blue-500"
                     >
                         {'->'} v/v bảo đảm trật tự, an toàn giao thông, nhân dịp nghỉ lễ Giỗ tổ Hùng Vương, lễ
-                        30/4-/1/5
-                        và cao điểm du lịch hè 2024
+                        30/4-/1/5 và cao điểm du lịch hè 2024
                     </Link>
                     <br />
                     <Link
@@ -64,9 +61,7 @@ export default function Guide() {
                         className="hover:underline hover:text-blue-700 text-blue-500"
                     >
                         {'->'} Quyết định phê duyệt danh sách các Dự án khởi nghiệp được lựa chọn vào vòng chung
-                        kết
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        cấp vùng Cuộc thi "Phụ nữ khởi nghiệp, phát huy tài nguyên bản địa" năm 2023
+                        kết cấp vùng Cuộc thi &apos;Phụ nữ khởi nghiệp, phát huy tài nguyên bản địa&apos; năm 2023
                     </Link>
                 </p>
             </div>

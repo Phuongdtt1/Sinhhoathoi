@@ -22,30 +22,19 @@ export default function Introduction() {
                         <ul>
                             <li>a. Cấp Trung ương;</li>
                             <li>b. Cấp tỉnh (bao gồm Hội Liên hiệp Phụ nữ các tỉnh, thành phố trực
-                                thuộc
-                                Trung ương và
-                                tương
-                                đương);
+                                thuộc Trung ương và tương đương);
                             </li>
                             <li>c. Cấp huyện (bao gồm Hội Liên hiệp Phụ nữ các quận, huyện, thị xã,
-                                thành phố thuộc tỉnh
-                                và
-                                tương
-                                đương);
+                                thành phố thuộc tỉnh và tương đương);
                             </li>
-                            <li>d. Cấp cơ sở (bao gồm Hội Liên hiệp Phụ nữ các xã, phường, thị trấn
-                                và
-                                tương đương).
+                            <li>d. Cấp cơ sở (bao gồm Hội Liên hiệp Phụ nữ các xã, phường, thị trấn và tương đương).
                             </li>
                         </ul>
                         <div>
                             2. Trung ương Hội; Hội Liên hiệp Phụ nữ các tỉnh, thành phố trực thuộc Trung ương; Hội Liên
-                            hiệp
-                            Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh; Hội Liên hiệp Phụ nữ các xã, phường,
-                            thị
-                            trấn
-                            có
-                            tư cách pháp nhân độc lập, hoạt động trong khuôn khổ Hiến pháp và pháp luật.
+                            hiệp Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh; Hội Liên hiệp Phụ nữ các xã,
+                            phường, thị trấn có tư cách pháp nhân độc lập, hoạt động trong khuôn khổ Hiến pháp và pháp
+                            luật.
                         </div>
                     </div>
                 </div>
@@ -58,35 +47,27 @@ export default function Introduction() {
                         <ul>
                             <li>
                                 a. Cơ quan lãnh đạo cao nhất của Hội là Đại hội đại biểu Phụ nữ
-                                toàn
-                                quốc;
+                                toàn quốc;
                             </li>
                             <li>
-                                b. Cơ quan lãnh đạo ở mỗi cấp Hội là Đại hội đại biểu hoặc Đại hội
-                                toàn
+                                b. Cơ quan lãnh đạo ở mỗi cấp Hội là Đại hội đại biểu hoặc Đại hội toàn
                                 thể hội viên của cấp đó;
                             </li>
                             <li>
-                                c. Giữa hai kỳ đại hội, cơ quan lãnh đạo mỗi cấp Hội là Ban Chấp
-                                hành
+                                c. Giữa hai kỳ đại hội, cơ quan lãnh đạo mỗi cấp Hội là Ban Chấp hành
                                 cùng cấp;
                             </li>
                             <li>
-                                d. Giữa hai kỳ họp Ban Chấp hành, cơ quan lãnh đạo là Đoàn Chủ tịch
-                                hoặc
+                                d. Giữa hai kỳ họp Ban Chấp hành, cơ quan lãnh đạo là Đoàn Chủ tịch hoặc
                                 Ban Thường vụ cùng cấp.
                             </li>
                         </ul>
                         <div>2. Cơ quan chuyên trách các cấp Hội:</div>
                         <ul>
-                            <li>Cơ quan chuyên trách Trung ương Hội; cơ quan chuyên trách Hội Liên
-                                hiệp
+                            <li>Cơ quan chuyên trách Trung ương Hội; cơ quan chuyên trách Hội Liên hiệp
                                 Phụ nữ các tỉnh, thành phố trực thuộc Trung ương và tương đương; cơ quan chuyên trách
-                                Hội
-                                Liên
-                                hiệp Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh và tương đương là cơ quan tham
-                                mưu,
-                                giúp việc cho Ban Chấp hành, Đoàn Chủ tịch hoặc Ban Thường vụ cùng cấp.
+                                Hội Liên hiệp Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh và tương đương là cơ
+                                quan tham mưu, giúp việc cho Ban Chấp hành, Đoàn Chủ tịch hoặc Ban Thường vụ cùng cấp.
                             </li>
                         </ul>
                     </div>
