@@ -73,14 +73,6 @@ export function Header() {
                     <Navbar.Collapse>
                         <Navbar.Link
                             as={Link}
-                            href="/guide"
-                            active={pathname == '/guide'}
-                            className="md:text-xl"
-                        >
-                            Hướng dẫn
-                        </Navbar.Link>
-                        <Navbar.Link
-                            as={Link}
                             href="/introduction"
                             active={pathname == '/introduction'}
                             className="md:text-xl"
@@ -89,19 +81,19 @@ export function Header() {
                         </Navbar.Link>
                         <Navbar.Link
                             as={Link}
+                            href="/guide"
+                            active={pathname == '/guide'}
+                            className="md:text-xl"
+                        >
+                            Hướng dẫn
+                        </Navbar.Link>
+                        <Navbar.Link
+                            as={Link}
                             href="/image"
                             active={pathname == '/image'}
                             className="md:text-xl"
                         >
                             Hình ảnh
-                        </Navbar.Link>
-                        <Navbar.Link
-                            as={Link}
-                            href="/activity"
-                            active={pathname == '/activity'}
-                            className="md:text-xl"
-                        >
-                            Hoạt động
                         </Navbar.Link>
                         <Navbar.Link
                             as={Link}

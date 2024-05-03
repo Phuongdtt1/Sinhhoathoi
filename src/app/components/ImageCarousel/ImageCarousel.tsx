@@ -4,7 +4,7 @@ import React from 'react';
 
 export function ImageCarousel({ urls }: { urls: string[] }) {
     return (
-        <div className="h-[600px] my-4">
+        <div className="aspect-4/3">
             <Carousel>
                 {
                     urls.map(
