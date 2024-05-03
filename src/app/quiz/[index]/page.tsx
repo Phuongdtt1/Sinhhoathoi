@@ -1,27 +1,12 @@
 'use client';
 
 import { Button } from 'flowbite-react';
-import { quizs } from '@/app/resources/QuizData';
+import { QuizData, quizs } from '@/app/resources/QuizData';
 import { FormEvent, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useAtom } from 'jotai';
 import { nameAtom, unitAtom } from '@/app/atoms';
-
-interface Answer {
-    text: string;
-    correct: boolean;
-}
-
-interface QuizQuestion {
-    question: string;
-    answers: Answer[];
-}
-
-interface Quiz {
-    quizTitle: string;
-    questions: QuizQuestion[];
-}
 
 interface ContestProps {
     params: { index: number };
@@ -30,7 +15,7 @@ interface ContestProps {
 const Contest = ({ params }: ContestProps) => {
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({});
     const [score, setScore] = useState(0);
-    const quiz: Quiz = quizs[params.index];
+    const quiz: QuizData = quizs[params.index];
     const [name] = useAtom(nameAtom);
     const [unit] = useAtom(unitAtom);
 
@@ -76,7 +61,7 @@ const Contest = ({ params }: ContestProps) => {
             className="container my-4 text-justify"
             onSubmit={handleSubmit}
         >
-            <h1 className="text-center bg-red-400 font-bold text-2xl p-4">
+            <h1 className={`text-center ${quiz.metaData.color} font-bold text-2xl p-4 text-white`}>
                 {quiz.quizTitle}
             </h1>
             {quiz.questions.map((question, questionIndex) => (

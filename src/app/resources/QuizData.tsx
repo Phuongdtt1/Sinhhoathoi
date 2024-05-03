@@ -1,4 +1,4 @@
-interface QuizData {
+export interface QuizData {
     quizTitle: string;
     questions: {
         question: string;
@@ -7,6 +7,9 @@ interface QuizData {
             correct: boolean;
         }[];
     }[];
+    metaData: {
+        color: string;
+    };
 }
 
 export const quizs: QuizData[] = [
@@ -225,6 +228,9 @@ export const quizs: QuizData[] = [
             },
 
         ],
+        'metaData': {
+            'color': 'bg-red-500',
+        },
     },
     {
         'quizTitle': 'Cuộc thi tim hiểu Điều lệ Hội liên hiệp phụ nữ Việt nam khóa XVIII',
@@ -439,7 +445,9 @@ export const quizs: QuizData[] = [
                     },
                 ],
             },
-
         ],
+        'metaData': {
+            'color': 'bg-blue-500',
+        },
     },
 ];
