@@ -18,7 +18,13 @@ export default function Home() {
     };
 
     return (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div
+            className="absolute inset-0 flex items-center justify-center"
+        >
+            <div
+                className="absolute z-[-1] opacity-50 inset-0 bg-no-repeat bg-cover bg-center"
+                style={{ backgroundImage: 'url(\'/images/bien-phong.jpg\')' }}
+            />
             <form
                 className="flex max-w-md min-w-80 flex-col gap-4"
                 onSubmit={handleSubmit}

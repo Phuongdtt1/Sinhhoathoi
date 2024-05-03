@@ -1,11 +1,12 @@
 'use client';
 
-import {useSearchParams} from 'next/navigation';
-import {Button} from 'flowbite-react';
-import {quizs} from '@/app/resources/QuizData';
-import {FormEvent, useState} from 'react';
+import { Button } from 'flowbite-react';
+import { quizs } from '@/app/resources/QuizData';
+import { FormEvent, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
+import { useAtom } from 'jotai';
+import { nameAtom, unitAtom } from '@/app/atoms';
 
 interface Answer {
     text: string;
@@ -26,14 +27,12 @@ interface ContestProps {
     params: { index: number };
 }
 
-const Contest = ({params}: ContestProps) => {
+const Contest = ({ params }: ContestProps) => {
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({});
     const [score, setScore] = useState(0);
     const quiz: Quiz = quizs[params.index];
-    const searchParams = useSearchParams();
-
-    const name = searchParams.get('name');
-    const unit = searchParams.get('unit');
+    const [name] = useAtom(nameAtom);
+    const [unit] = useAtom(unitAtom);
 
     const handleAnswerChange = (questionIndex: number, answerIndex: number) => {
         setSelectedAnswers({
@@ -47,7 +46,7 @@ const Contest = ({params}: ContestProps) => {
         const unansweredQuestions: number[] = [];
         quiz.questions.forEach((_, index) => {
             if (selectedAnswers[index] === undefined) {
-                unansweredQuestions.push(index + 1); // +1 to make it human-readable (not zero-based)
+                unansweredQuestions.push(index + 1);
             }
         });
 
@@ -66,7 +65,7 @@ const Contest = ({params}: ContestProps) => {
             }
         });
         setScore(newScore);
-        toast.success(`Điểm số của bạn là: ${newScore}`, {
+        toast.success(`Điểm số của bạn là: ${newScore}/${quiz.questions.length}`, {
             position: 'top-center',
         });
     };
@@ -74,7 +73,7 @@ const Contest = ({params}: ContestProps) => {
     return (
         <form
             name="quiz"
-            className="container"
+            className="container my-4"
             onSubmit={handleSubmit}
         >
             <h1 className="text-center bg-red-400 font-bold text-2xl p-4">
@@ -106,7 +105,7 @@ const Contest = ({params}: ContestProps) => {
                     ))}
                 </div>
             ))}
-            <div className="grid grid-cols-1 sm:grid-cols-2 bg-red-200 p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 bg-red-200 p-8 mt-4 gap-4">
                 <div>
                     <div className="text-2xl mb-4">
                         <span className="font-bold">Họ và tên: {' '}</span>
@@ -117,7 +116,7 @@ const Contest = ({params}: ContestProps) => {
                         {unit}
                     </div>
                 </div>
-                <div className="flex flex-row justify-evenly items-center">
+                <div className="flex flex-row justify-evenly items-stretch">
                     <Button
                         type="submit"
                         size="lg"
@@ -126,8 +125,8 @@ const Contest = ({params}: ContestProps) => {
                         type="text"
                         id="disabled-input"
                         aria-label="disabled input"
-                        className="rounded-lg block cursor-not-allowed text-center w-36"
-                        value={`Điểm: ${score}`}
+                        className="rounded-lg block cursor-not-allowed text-center w-28"
+                        value={`Điểm: ${score}/${quiz.questions.length}`}
                         disabled
                     />
                 </div>
