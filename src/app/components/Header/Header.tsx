@@ -44,11 +44,11 @@ export function Header() {
                         </Navbar.Link>
                         <Navbar.Link
                             as={Link}
-                            href="/login"
-                            active={pathname == '/login'}
+                            href="/introduction"
+                            active={pathname == '/introduction'}
                             className="md:text-xl"
                         >
-                            Đăng nhập
+                            Giới thiệu
                         </Navbar.Link>
                         <Navbar.Link
                             as={Link}
