@@ -6,7 +6,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useAtom } from 'jotai/index';
 import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
 
-
 export function Header() {
     const [name, setName] = useAtom(nameAtom);
     const [unit, setUnit] = useAtom(unitAtom);
@@ -21,10 +20,15 @@ export function Header() {
         router.push('/');
     };
 
+    const navLinks = [
+        { href: '/introduction', text: 'Giới thiệu' },
+        { href: '/guide', text: 'Hướng dẫn' },
+        { href: '/image', text: 'Hình ảnh' },
+        { href: '/quiz', text: 'Trắc nghiệm' },
+    ];
+
     return (
-        <header
-            className="bg-green-100"
-        >
+        <header className="bg-green-100">
             <div className="container relative">
                 <Navbar
                     fluid
@@ -47,18 +51,16 @@ export function Header() {
                             <div className="text-lg sm:text-2xl self-center">SINH HOẠT HỘI</div>
                         </Button>
                     </Navbar.Brand>
-                    {isLoggedIn &&
+                    {isLoggedIn && (
                         <div className="flex md:order-2">
                             <Dropdown
                                 arrowIcon={false}
                                 inline
-                                label={
-                                    <Avatar
-                                        alt="User settings"
-                                        img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                                        rounded
-                                    />
-                                }
+                                label={<Avatar
+                                    alt="User settings"
+                                    img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                                    rounded
+                                />}
                             >
                                 <Dropdown.Header>
                                     <span className="block">{name}</span>
@@ -68,42 +70,23 @@ export function Header() {
                                 <Dropdown.Item onClick={handleLogout}>Đăng xuất</Dropdown.Item>
                             </Dropdown>
                         </div>
-                    }
-                    <Navbar.Toggle />
-                    <Navbar.Collapse>
-                        <Navbar.Link
-                            as={Link}
-                            href="/introduction"
-                            active={pathname == '/introduction'}
-                            className="md:text-xl"
-                        >
-                            Giới thiệu
-                        </Navbar.Link>
-                        <Navbar.Link
-                            as={Link}
-                            href="/guide"
-                            active={pathname == '/guide'}
-                            className="md:text-xl"
-                        >
-                            Hướng dẫn
-                        </Navbar.Link>
-                        <Navbar.Link
-                            as={Link}
-                            href="/image"
-                            active={pathname == '/image'}
-                            className="md:text-xl"
-                        >
-                            Hình ảnh
-                        </Navbar.Link>
-                        <Navbar.Link
-                            as={Link}
-                            href="/quiz"
-                            active={pathname == '/quiz'}
-                            className="md:text-xl"
-                        >
-                            Trắc nghiệm
-                        </Navbar.Link>
-                    </Navbar.Collapse>
+                    )}
+                    {isLoggedIn && <Navbar.Toggle />}
+                    {isLoggedIn && (
+                        <Navbar.Collapse>
+                            {navLinks.map((link, index) => (
+                                <Navbar.Link
+                                    key={index}
+                                    as={Link}
+                                    href={link.href}
+                                    active={pathname == link.href}
+                                    className="md:text-xl"
+                                >
+                                    {link.text}
+                                </Navbar.Link>
+                            ))}
+                        </Navbar.Collapse>
+                    )}
                 </Navbar>
             </div>
         </header>
