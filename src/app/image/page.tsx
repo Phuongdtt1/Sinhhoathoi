@@ -4,7 +4,9 @@ import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { VideoCard } from '@/app/components/VideoCard/VideoCard';
 import Link from 'next/link';
-import { groupImages, newsItems, videos, womenImageUrls } from '@/app/resources/data';
+import { groupImages, womenImageUrls } from '@/app/resources/images';
+import { videos } from '@/app/resources/videos';
+import { newsItems } from '@/app/resources/news';
 
 const Image = () => {
     const [expandedGroups, setExpandedGroups] = useState<string[]>([]);
