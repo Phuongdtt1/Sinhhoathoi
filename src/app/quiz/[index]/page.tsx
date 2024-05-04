@@ -128,7 +128,7 @@ const Contest = ({ params }: ContestProps) => {
                                 checked={selectedAnswers[questionIndex] === answerIndex}
                                 className={`mr-2 ${answerClassName(questionIndex, answerIndex, answer)}`}
                             />
-                            {String.fromCharCode(65 + answerIndex)} {') '} {answer.text}
+                            {`${String.fromCharCode(65 + answerIndex)}) ${answer.text}`}
                         </label>
                     ))}
                 </div>
