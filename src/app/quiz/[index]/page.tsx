@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { useAtom } from 'jotai';
 import { nameAtom, unitAtom } from '@/app/atoms';
 import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
-import { QuizData, quizzes } from '@/app/resources/data';
+import { QuizData, quizzes } from '@/app/resources/quizzes';
 import Loading from '@/app/loading';
 
 interface ContestProps {

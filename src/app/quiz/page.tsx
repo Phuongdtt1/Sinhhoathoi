@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { quizzes, references } from '@/app/resources/data';
+import { quizzes } from '@/app/resources/quizzes';
+import { references } from '@/app/resources/references';
 
 const Quiz = () => {
     return (

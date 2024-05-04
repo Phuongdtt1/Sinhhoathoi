@@ -1,6 +1,6 @@
 'use client';
 
-import { SectionProps, sections } from '@/app/resources/data';
+import { introductionSections, SectionProps } from '@/app/resources/sections';
 
 const introduction_title: string = 'Giới thiệu';
 
@@ -22,7 +22,7 @@ function Introduction() {
         <div className="container">
             <div className="text-red-500 text-4xl font-bold mx-4 mt-4">{introduction_title}</div>
             <div className="grid md:grid-cols-2 grid-cols-1">
-                {sections.map((section, index) => (
+                {introductionSections.map((section, index) => (
                     <Section
                         key={index}
                         title={section.title}

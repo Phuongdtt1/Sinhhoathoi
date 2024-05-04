@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-
-export interface VideoCardProps {
-    title: string;
-    content: string;
-    url: string;
-}
+import { VideoCardProps } from '@/app/resources/videos';
 
 export function VideoCard({ title, content, url }: VideoCardProps) {
     const [showVideo, setShowVideo] = useState(false);
