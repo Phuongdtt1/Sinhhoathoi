@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import {quizs} from '@/app/resources/QuizData';
-import {useAtom} from 'jotai/index';
-import {nameAtom, unitAtom} from '@/app/atoms';
+import { quizs } from '@/app/resources/QuizData';
+import { useAtom } from 'jotai/index';
+import { nameAtom, unitAtom } from '@/app/atoms';
 
 const Quiz = () => {
     const [name] = useAtom(nameAtom);

@@ -1,9 +1,9 @@
 'use client';
 
-import {Button, Label, TextInput} from 'flowbite-react';
-import {useRouter} from 'next/navigation';
-import {useAtom} from 'jotai';
-import {isLoggedInAtom, nameAtom, unitAtom} from '@/app/atoms';
+import { Button, Label, TextInput } from 'flowbite-react';
+import { useRouter } from 'next/navigation';
+import { useAtom } from 'jotai';
+import { isLoggedInAtom, nameAtom, unitAtom } from '@/app/atoms';
 
 export default function Home() {
     const [name, setName] = useAtom(nameAtom);
