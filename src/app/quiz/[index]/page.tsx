@@ -1,13 +1,13 @@
 'use client';
 
 import { Button } from 'flowbite-react';
-import { FormEvent, ReactElement, useEffect, useState } from 'react';
+import { FormEvent, ReactElement, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useAtom } from 'jotai';
 import { nameAtom, unitAtom } from '@/app/atoms';
 import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
-import { QuizData, quizzes } from '@/app/resources/quizzes';
+import { quizzes } from '@/app/resources/quizzes';
 import Loading from '@/app/loading';
 
 interface ContestProps {
@@ -31,33 +31,15 @@ const getResultMessage = (percentageCorrect: number) => {
 };
 
 
-function shuffleAnswer(array: { text: string, correct: boolean }[]) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
 const Contest = ({ params }: ContestProps) => {
-    const [quiz, setQuiz] = useState<QuizData | null>(null);
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({});
     const [score, setScore] = useState(0);
     const [name] = useAtom(nameAtom);
     const [unit] = useAtom(unitAtom);
     const [fireworks, setFireworks] = useState<ReactElement[]>([]);
     const [submitted, setSubmitted] = useState<boolean>(false);
+    const quiz = quizzes[params.index];
 
-    useEffect(() => {
-        const shuffledQuiz = {
-            ...quizzes[params.index],
-            questions: quizzes[params.index].questions.map(question => ({
-                ...question,
-                answers: shuffleAnswer([...question.answers]),
-            })),
-        };
-        setQuiz(shuffledQuiz);
-    }, [params.index]);
 
     if (!quiz) return <Loading />;
 
@@ -146,6 +128,12 @@ const Contest = ({ params }: ContestProps) => {
                                 checked={selectedAnswers[questionIndex] === answerIndex}
                                 className={`mr-2 ${answerClassName(questionIndex, answerIndex, answer)}`}
                             />
+                            {
+                                String.fromCharCode(65 + answerIndex)
+                            }
+                            {
+                                ') '
+                            }
                             {answer.text}
                         </label>
                     ))}
