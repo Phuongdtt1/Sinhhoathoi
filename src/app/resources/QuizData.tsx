@@ -12,7 +12,7 @@ export interface QuizData {
     };
 }
 
-export const quizs: QuizData[] = [
+export const quizzes: QuizData[] = [
     {
         'quizTitle': 'Cuộc thi tim hiểu Tăng cường bảo đảm an toàn thông tin mạng',
         'questions': [

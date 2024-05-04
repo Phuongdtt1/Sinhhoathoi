@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { quizs } from '@/app/resources/QuizData';
+import { quizzes } from '@/app/resources/QuizData';
 import { useAtom } from 'jotai/index';
 import { nameAtom, unitAtom } from '@/app/atoms';
 
@@ -31,7 +31,7 @@ const Quiz = () => {
     return (
         <div className="container">
             {
-                quizs.map((quiz, index) => (
+                quizzes.map((quiz, index) => (
                     <Link
                         key={index}
                         href={`/quiz/${index}`}

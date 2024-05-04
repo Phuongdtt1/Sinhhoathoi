@@ -1,13 +1,14 @@
 'use client';
 
 import { Button } from 'flowbite-react';
-import { QuizData, quizs } from '@/app/resources/QuizData';
-import { FormEvent, ReactElement, useState } from 'react';
+import { FormEvent, ReactElement, useEffect, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { useAtom } from 'jotai';
 import { nameAtom, unitAtom } from '@/app/atoms';
 import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
+import { QuizData, quizzes } from '@/app/resources/QuizData';
+import Loading from '@/app/loading';
 
 interface ContestProps {
     params: { index: number };
@@ -15,27 +16,48 @@ interface ContestProps {
 
 const getResultMessage = (percentageCorrect: number) => {
     if (percentageCorrect < 20) {
-        return 'Bạn cần cố gắng nhiều hơn!';
+        return 'Kém!';
     } else if (percentageCorrect < 40) {
-        return 'Bạn đã làm khá tốt, hãy cố gắng thêm!';
+        return 'Yếu!';
     } else if (percentageCorrect < 60) {
-        return 'Khá tốt, bạn có thể làm tốt hơn!';
+        return 'Trung bình!';
     } else if (percentageCorrect < 80) {
-        return 'Tuyệt vời! Bạn đã gần đạt mức cao nhất.';
+        return 'Khá!';
     } else if (percentageCorrect < 100) {
-        return 'Xuất sắc! Bạn gần như hoàn hảo!';
+        return 'Giỏi!';
     } else {
-        return 'Hoàn hảo! Tròn điểm!';
+        return 'Xuất sắc!';
     }
 };
 
+function shuffleAnswer(array: { text: string, correct: boolean }[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 const Contest = ({ params }: ContestProps) => {
+    const [quiz, setQuiz] = useState<QuizData | null>(null);
     const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({});
     const [score, setScore] = useState(0);
-    const quiz: QuizData = quizs[params.index];
     const [name] = useAtom(nameAtom);
     const [unit] = useAtom(unitAtom);
     const [fireworks, setFireworks] = useState<ReactElement[]>([]);
+
+    useEffect(() => {
+        const shuffledQuiz = {
+            ...quizzes[params.index],
+            questions: quizzes[params.index].questions.map(question => ({
+                ...question,
+                answers: shuffleAnswer([...question.answers]),
+            })),
+        };
+        setQuiz(shuffledQuiz);
+    }, [params.index]);
+
+    if (!quiz) return <Loading />;
 
     const handleAnswerChange = (questionIndex: number, answerIndex: number) => {
         setSelectedAnswers({
@@ -72,7 +94,7 @@ const Contest = ({ params }: ContestProps) => {
 
         toast.success(`${resultMessage} Điểm số: ${newScore}/${totalQuestions}`);
         if (percentageCorrect == 100) {
-            setFireworks(fireworks.concat(<Fireworks autorun={{ speed: 3, duration: 3000 }} />));
+            setFireworks(fireworks.concat(<Fireworks autorun={{ speed: 5, duration: 5000 }} />));
         }
     };
 
