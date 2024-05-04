@@ -98,22 +98,6 @@ export function Header() {
                             ))}
                         </Navbar.Collapse>
                     )}
-                    {!isLoggedIn && (
-                        <Button
-                            size="sm"
-                            className="bg-blue-800"
-                        >
-                            <Link
-                                href="/"
-                                className="text-lg sm:text-2xl text-left"
-                            >
-                                ĐĂNG {' '}
-                                <br className="sm:hidden" />
-                                NHẬP
-                            </Link>
-                        </Button>
-                    )
-                    }
                 </Navbar>
             </div>
         </header>
