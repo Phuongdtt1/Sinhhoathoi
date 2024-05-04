@@ -65,7 +65,7 @@ export function Header() {
                                 inline
                                 label={<Avatar
                                     alt="User settings"
-                                    img="https://accgroup.vn/wp-content/uploads/2022/12/logo-bo-doi-bien-phong-viet-nam.webp"
+                                    img="/images/logopn.png"
                                     rounded
                                 />}
                                 placement="bottom-end"
