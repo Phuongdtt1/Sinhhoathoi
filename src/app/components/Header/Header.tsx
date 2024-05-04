@@ -38,7 +38,7 @@ export function Header() {
                 >
                     <Navbar.Brand
                         as={Link}
-                        href="/image"
+                        href="/"
                         className="shrink"
                     >
                         <Button
