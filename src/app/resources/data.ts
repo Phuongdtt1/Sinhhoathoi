@@ -1,3 +1,5 @@
+import { VideoCardProps } from '@/app/components/VideoCard/VideoCard';
+
 export interface QuizData {
     quizTitle: string;
     questions: {
@@ -449,5 +451,252 @@ export const quizzes: QuizData[] = [
         'metaData': {
             'color': 'bg-blue-500',
         },
+    },
+];
+
+export const references = [
+    {
+        url: 'https://hoilhpn.org.vn/documents/246915/6360445/33cd.signed.pdf/21845a53-05da-4e07-a6b9-dfc30b4a4531',
+        text: 'Công điện của Thủ tướng Chính phủ số 33/CĐ-TTg về tăng cường bảo đảm an toàn thông tin mạng',
+    },
+    {
+        url: 'https://hoilhpn.org.vn/documents/20182/0/_VB_1713259272222_VB_3222-CV%202024.pdf/5d060488-8411-4cd8-92fb-316a2c7b617e',
+        text: 'v/v bảo đảm trật tự, an toàn giao thông, nhân dịp nghỉ lễ Giỗ tổ Hùng Vương, lễ 30/4-/1/5 và cao điểm du lịch hè 2024',
+    },
+    {
+        url: 'https://hoilhpn.org.vn/tin-chi-tiet/-/chi-tiet/%C4%91ieu-le-hoi-lien-hiep-phu-nu-viet-nam-46760-6801.html',
+        text: 'Điều lệ Hội Liên hiệp phụ nữ Việt Nam khóa XVIII',
+    },
+    {
+        url: 'https://hoilhpn.org.vn/documents/20182/0/_VB_1692093800943_VB_2494-Q%C4%90-HTPNPTKT.pdf/b9612f2c-37e3-467f-b812-393e111a291c',
+        text: 'Quyết định phê duyệt danh sách các Dự án khởi nghiệp được lựa chọn vào vòng chung kết cấp vùng Cuộc thi \'Phụ nữ khởi nghiệp, phát huy tài nguyên bản địa\' năm 2023',
+    },
+];
+
+export interface SectionProps {
+    title: string;
+    content: string[];
+}
+
+export const sections: SectionProps[] = [
+    {
+        title: 'HỆ THỐNG TỔ CHỨC VÀ TƯ CÁCH PHÁP NHÂN CỦA CÁC CẤP HỘI',
+        content: [
+            '1. Hội Liên hiệp Phụ nữ Việt Nam gồm 4 cấp:',
+            'a. Cấp Trung ương;',
+            'b. Cấp tỉnh (bao gồm Hội Liên hiệp Phụ nữ các tỉnh, thành phố trực thuộc Trung ương và tương đương);',
+            'c. Cấp huyện (bao gồm Hội Liên hiệp Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh và tương đương);',
+            'd. Cấp cơ sở (bao gồm Hội Liên hiệp Phụ nữ các xã, phường, thị trấn và tương đương).',
+            '2. Trung ương Hội; Hội Liên hiệp Phụ nữ các tỉnh, thành phố trực thuộc Trung ương; Hội Liên hiệp Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh; Hội Liên hiệp Phụ nữ các xã, phường, thị trấn có tư cách pháp nhân độc lập, hoạt động trong khuôn khổ Hiến pháp và pháp luật.',
+        ],
+    },
+    {
+        title: 'CƠ QUAN LÃNH ĐẠO VÀ CƠ QUAN CHUYÊN TRÁCH CÁC CẤP HỘI',
+        content: [
+            '1. Cơ quan lãnh đạo các cấp Hội:',
+            'a. Cơ quan lãnh đạo cao nhất của Hội là Đại hội đại biểu Phụ nữ toàn quốc;',
+            'b. Cơ quan lãnh đạo ở mỗi cấp Hội là Đại hội đại biểu hoặc Đại hội toàn thể hội viên của cấp đó;',
+            'c. Giữa hai kỳ đại hội, cơ quan lãnh đạo mỗi cấp Hội là Ban Chấp hành cùng cấp;',
+            'd. Giữa hai kỳ họp Ban Chấp hành, cơ quan lãnh đạo là Đoàn Chủ tịch hoặc Ban Thường vụ cùng cấp.',
+            '2. Cơ quan chuyên trách các cấp Hội:',
+            'Cơ quan chuyên trách Trung ương Hội; cơ quan chuyên trách Hội Liên hiệp Phụ nữ các tỉnh, thành phố trực thuộc Trung ương và tương đương; cơ quan chuyên trách Hội Liên hiệp Phụ nữ các quận, huyện, thị xã, thành phố thuộc tỉnh và tương đương là cơ quan tham mưu, giúp việc cho Ban Chấp hành, Đoàn Chủ tịch hoặc Ban Thường vụ cùng cấp.',
+        ],
+    },
+];
+
+interface GroupImage {
+    title: string,
+    images: {
+        url: string,
+    }[]
+}
+
+export const womenImageUrls: string[] = [
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/3.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/4.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/5.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/6.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/7.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/8.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/9.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/10.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/11.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/12.jpg',
+    'https://res.cloudinary.com/ezcode97/image/upload/v1714322646/sinh_hoat_hoi/phu_nu/13.jpg',
+];
+export const groupImages: GroupImage[] = [
+    {
+        title: 'Hội thi Báo cáo viên giỏi toàn quân năm 2023',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324544/sinh_hoat_hoi/other/bcaovien.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324544/sinh_hoat_hoi/other/bcaovien2.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bcv3.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/bcv4.jpg',
+            },
+        ],
+    },
+    {
+        title: 'Hội phụ nữ BĐBP Nghệ An tổ chức chương trình "Bát nước thao trường" và "Bữa cơm dinh dưỡng" phục vụ cán bộ, chiến sĩ đang thực hiện nhiệm vụ phục vụ diễn tập năm 2022',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc1.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/batnc2.jpg',
+            },
+        ],
+    },
+    {
+        title: 'Những nữ chiến sĩ biên phòng xinh đẹp biểu diễn võ thuật, khí công Trong lễ ra quân huấn luyện năm 2024',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo1.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo2.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo3.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo4.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/vo5.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo6.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo7.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324763/sinh_hoat_hoi/other/vo8.jpg',
+            },
+        ],
+    },
+    {
+        title: 'Trao quà cho các học sinh vùng núi đặc biệt khó khăn tuyến Kỳ Sơn', images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson2.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/kyson3.jpg',
+            },
+        ],
+    },
+    {
+        title: 'Trao tặng bò giống cho người nghèo Đan Lai', images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-3.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-2.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-3.jpg',
+            },
+        ],
+    },
+    {
+        title: 'Chương trình đồng hành cùng phụ nữ biên cương',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-1.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-4.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-5.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/tq-6.jpg',
+            },
+
+        ],
+    },
+    {
+        title: 'Nguồn Facebook',
+        images: [
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb1.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb2.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb3.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb4.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb5.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb6.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb7.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714414282/sinh_hoat_hoi/other/fb8.jpg',
+            },
+            {
+                url: 'https://res.cloudinary.com/ezcode97/image/upload/v1714324582/sinh_hoat_hoi/other/qua-2.jpg',
+            },
+        ],
+    },
+];
+export const videos: VideoCardProps[] = [
+    {
+
+        title: 'Tặng quà trị giá 200 triệu cho phụ nữ xã biên giới',
+        content: '',
+        url: 'https://drive.google.com/file/d/1JNkndDFvyj6RAICaBmcNxTAUaLxL9tPf/preview',
+
+    }, {
+        title: 'Đồng hành cùng mái ấm biên cương',
+        content: '',
+        url: 'https://drive.google.com/file/d/1bOGi2lkhT_Gk15EeJDyxlPNTHdlHimQX/preview',
+    }, {
+        title: 'Bát cháo tình thương tháng 1',
+        content: '',
+        url: 'https://drive.google.com/file/d/10fdMsEGCIONaYwDMpGNRzGej9LmXwFi7/preview',
+    },
+];
+
+export interface NewsProps {
+    title: string,
+    link: string
+}
+
+export const newsItems: NewsProps[] = [
+    {
+        title: 'Sáng đẹp hình ảnh nữ Quân nhân BĐBP',
+        link: 'https://www.bienphong.com.vn/sang-dep-hinh-anh-nu-quan-nhan-bdbp-post473259.html',
+    },
+    {
+        title: 'Phụ nữ Nghệ An tổ chức các hoạt động "Đồng hành cùng phụ nữ biên cương" tại Con Cuông và Tương Dương',
+        link: 'https://mattrannghean.org.vn/cms/portal/read/cac-phong-trao-thi-dua-khac/news/phu-nu-nghe-an-to-chuc-cac-hoat-dong-ong-hanh-cung-phu-nu-bien-cuong-tai-con-cuo.html',
+    },
+    {
+        title: 'Hội phụ nữ Bộ chỉ huy Bộ đội Biên phòng Nghệ An xuất sắc giành giải A tại Hội thi “Cán bộ Hội cơ sở giỏi Bộ đội Biên phòng năm 2023”',
+        link: 'https://lhpn.nghean.gov.vn/hoat-dong-hoi/hoi-phu-nu-bo-chi-huy-bo-doi-bien-phong-nghe-an-xuat-sac-gianh-giai-a-tai-hoi-thi-can-bo-hoi-co--583179',
+    },
+    {
+        title: 'Phụ nữ thủ đô "đồng hành cùng phụ nữ biên cương" Nghệ An',
+        link: 'https://lhpn.nghean.gov.vn/thong-bao/phu-nu-thu-do-dong-hanh-cung-phu-nu-bien-cuong-nghe-an-495363?pageindex=0',
     },
 ];

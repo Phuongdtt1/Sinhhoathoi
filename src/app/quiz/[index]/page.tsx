@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { useAtom } from 'jotai';
 import { nameAtom, unitAtom } from '@/app/atoms';
 import Fireworks from 'react-canvas-confetti/dist/presets/fireworks';
-import { QuizData, quizzes } from '@/app/resources/QuizData';
+import { QuizData, quizzes } from '@/app/resources/data';
 import Loading from '@/app/loading';
 
 interface ContestProps {
@@ -30,6 +30,7 @@ const getResultMessage = (percentageCorrect: number) => {
     }
 };
 
+
 function shuffleAnswer(array: { text: string, correct: boolean }[]) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -45,6 +46,7 @@ const Contest = ({ params }: ContestProps) => {
     const [name] = useAtom(nameAtom);
     const [unit] = useAtom(unitAtom);
     const [fireworks, setFireworks] = useState<ReactElement[]>([]);
+    const [submitted, setSubmitted] = useState<boolean>(false);
 
     useEffect(() => {
         const shuffledQuiz = {
@@ -81,6 +83,7 @@ const Contest = ({ params }: ContestProps) => {
             return;
         }
 
+        setSubmitted(true);
         let newScore = 0;
         quiz.questions.forEach((question, index) => {
             if (selectedAnswers[index] !== undefined && question.answers[selectedAnswers[index]].correct) {
@@ -96,6 +99,21 @@ const Contest = ({ params }: ContestProps) => {
         if (percentageCorrect == 100) {
             setFireworks(fireworks.concat(<Fireworks autorun={{ speed: 5, duration: 5000 }} />));
         }
+    };
+
+    const answerClassName = (questionIndex: number, answerIndex: number, answer: {
+        text: string,
+        correct: boolean
+    }) => {
+        if (!submitted) {
+            return '';
+        }
+        if (answer.correct) {
+            return 'text-green-500';
+        } else if (selectedAnswers[questionIndex] === answerIndex) {
+            return 'text-red-500';
+        }
+        return '';
     };
 
     return (
@@ -118,7 +136,7 @@ const Contest = ({ params }: ContestProps) => {
                     {question.answers.map((answer, answerIndex) => (
                         <label
                             key={answerIndex}
-                            className="block indent-4"
+                            className={`block indent-4 ${answerClassName(questionIndex, answerIndex, answer)}`}
                         >
                             <input
                                 type="radio"
@@ -126,7 +144,7 @@ const Contest = ({ params }: ContestProps) => {
                                 value={answerIndex}
                                 onChange={() => handleAnswerChange(questionIndex, answerIndex)}
                                 checked={selectedAnswers[questionIndex] === answerIndex}
-                                className="mr-2"
+                                className={`mr-2 ${answerClassName(questionIndex, answerIndex, answer)}`}
                             />
                             {answer.text}
                         </label>

@@ -30,7 +30,7 @@ export function Header() {
 
     return (
         <header className="bg-blue-800">
-            <div className="container relative">
+            <div className="container sm:px-3 relative">
                 <Navbar
                     fluid
                     rounded
@@ -49,7 +49,7 @@ export function Header() {
                                 src="/images/logo.png"
                                 className="mr-3 h-12 sm:h-16"
                             />
-                            <div className="text-xl sm:text-2xl text-left">
+                            <div className="text-sm sm:text-2xl text-left">
                                 HỘI PHỤ NỮ
                                 <br />
                                 BỘ ĐỘI BIÊN PHÒNG {' '}
@@ -98,6 +98,22 @@ export function Header() {
                             ))}
                         </Navbar.Collapse>
                     )}
+                    {!isLoggedIn && (
+                        <Button
+                            size="sm"
+                            className="bg-blue-800"
+                        >
+                            <Link
+                                href="/"
+                                className="text-lg sm:text-2xl text-left"
+                            >
+                                ĐĂNG {' '}
+                                <br className="sm:hidden" />
+                                NHẬP
+                            </Link>
+                        </Button>
+                    )
+                    }
                 </Navbar>
             </div>
         </header>
