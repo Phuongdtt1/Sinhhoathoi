@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
-import { ImageCarousel } from '@/app/components/ImageCarousel/ImageCarousel';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import { VideoCard, VideoCardProps } from '@/app/components/VideoCard/VideoCard';
+import React, {useState} from 'react';
+import {ImageCarousel} from '@/app/components/ImageCarousel/ImageCarousel';
+import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
+import {VideoCard, VideoCardProps} from '@/app/components/VideoCard/VideoCard';
 import Link from 'next/link';
 
 interface GroupImage {
@@ -227,8 +227,16 @@ const Image = () => {
 
     return (
         <div className="container">
-            <ImageCarousel urls={womenImageUrls} />
-            <div className="text-2xl font-bold my-4">VIDEO HOẠT ĐỘNG</div>
+            <ImageCarousel urls={womenImageUrls}/>
+            <div className="mb-4">
+                <Link href="/quiz">
+                    <img
+                        className="rounded-2xl bg-red-500 text-white"
+                        src="/images/banner.jpg"
+                    />
+                </Link>
+            </div>
+            <div className="text-xl font-bold my-4">VIDEO HOẠT ĐỘNG</div>
             <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
                 {videos.map((video, idx) => (
                     <VideoCard
@@ -248,7 +256,7 @@ const Image = () => {
                     >
                         <div className="flex flex-row items-start gap-2">
                             <div>
-                                {isExpanded(group.title) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                                {isExpanded(group.title) ? <IoIosArrowUp/> : <IoIosArrowDown/>}
                             </div>
                             <div className={isExpanded(group.title) ? '' : 'truncate'}>{group.title}</div>
                         </div>
@@ -263,7 +271,7 @@ const Image = () => {
                                 >
                                     <div
                                         className="bg-cover bg-center w-full aspect-[4/3]"
-                                        style={{ backgroundImage: `url(${image.url})` }}
+                                        style={{backgroundImage: `url(${image.url})`}}
                                     />
                                 </div>
                             ))}
