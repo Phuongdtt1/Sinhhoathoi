@@ -16,8 +16,8 @@ export function Header() {
 
     const handleLogout = () => {
         setIsLoggedIn(false);
-        setName(null);
-        setUnit(null);
+        setName('');
+        setUnit('');
         router.push('/');
     };
 

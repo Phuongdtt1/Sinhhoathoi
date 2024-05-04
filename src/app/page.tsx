@@ -13,8 +13,8 @@ export default function Home() {
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-        router.push('/image');
         setIsLoggedIn(true);
+        router.push('/image');
     };
 
     return (
