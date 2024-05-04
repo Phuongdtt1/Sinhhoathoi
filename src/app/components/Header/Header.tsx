@@ -25,7 +25,7 @@ export function Header() {
         { href: '/guide', text: 'Cách thức sinh hoạt Hội' },
         { href: '/introduction', text: 'Giới thiệu' },
         { href: '/image', text: 'Tin tức - Sự kiện' },
-        { href: '/quiz', text: 'Trắc nghiệm' },
+        { href: '/quiz', text: 'Thi trắc nghiệm' },
     ];
 
     return (
